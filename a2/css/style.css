@@ -1,49 +1,81 @@
-html{
+ html{
     scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
 }
+header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    border: 0;
+    color: #E2FCEF;
+    background: #170F11;
+    font-family: sans-serif;
 
+}
 body{
     background-color: rgb(223, 64, 64);
     background-image: url(https://titan.csit.rmit.edu.au/~s3784464/media/neon.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
-    padding: 15px;
-    color: white;
+    padding: 0;
+    margin: 0;
+    color: #E2FCEF;
 }
 
+h1{
+    margin:0;
+}
 h2{
     color: white;
-    background: rgb(24, 22, 22)
+    background: #170F11;
+    margin:0;
 }
 
 h3{
     color: white;
-    background: rgb(44, 38, 38);
+    background: #170F11;
 }
 
-#navbar{
-    border: 10px solid white;
-    padding: 20px;
-    margin: 20px;
-    color: white;
-    background: black;
-    font-family: sans-serif;
+main{
+    padding-top: 100px;
 }
 
-.lunardo{
+#navbar a{
+    text-decoration: none;
+    color: #E2FCEF;
     font-size: 30px;
 }
 
+
+.lunardo{
+    font-size: 30px;
+    padding: 0;
+}
+
 #About-Us{
-    background: black;
+    margin-bottom: 20px;
+    background: #9B287B;
+}
+#About-Us a{
+    text-decoration: underline;
+    color: #E2FCEF;
+
 }
 
 #Prices{
-    background: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #402039;
 }
 
 #Now-Showing{
-    background: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #5C164E;
 }
 
 .links{
@@ -53,9 +85,6 @@ h3{
 }
 
 #endgame{
-    color: white;
-    background: purple;}
+    background: rgb(209, 9, 126);
+}
 
-#endgame h1{
-    color: white;
-    background: black;}

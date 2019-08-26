@@ -13,15 +13,13 @@
 
   <body>
     <header>
-      <div id="navbar">
-        <nav class='lunardo'><h1>Lunardo Cinema</h1></nav>
+      <div class='lunardo'><h1>Lunardo Cinema</h1></div>
+      <nav id="navbar">
         <!-- for putting an icon next to heading <img src =../../media/logo.png/> -->
-        <nav class='links'>
-          <a href= '#About-Us'>About Us</a>
-          <a href= '#Prices'>Prices</a>
+          <a href= '#About-Us'>About Us</a> -
+          <a href= '#Prices' >Prices</a> -
           <a href= '#Now-Showing'>Now Showing</a> 
-        </nav> 
-      </div>
+      </nav>
     </header>
 
     <main>
@@ -100,7 +98,7 @@
           The Happy Prince
         </div>
       </article>
-      
+
         <div id='endgame'>
           <h1>Avengers: Endgame</h1>
           <p>After the devastating events of <b>Avengers: Infinity War (2018)</b>, the universe is in ruins. With the help of remaining allies, 
