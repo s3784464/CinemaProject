@@ -13,30 +13,33 @@
 
   <body>
     <header>
-      <div id="mainHeading">
-        <h1>Lunardo Cinema</h1> <img src =../../media/logo.png/> 
+      <div id="navbar">
+        <nav class='lunardo'><h1>Lunardo Cinema</h1></nav>
+        <!-- for putting an icon next to heading <img src =../../media/logo.png/> -->
+        <nav class='links'>
+          <a href= '#About-Us'>About Us</a>
+          <a href= '#Prices'>Prices</a>
+          <a href= '#Now-Showing'>Now Showing</a> 
+        </nav> 
       </div>
     </header>
 
-    <nav>
-      <div>
-          <a href= '#About Us'>About Us</a>
-          <a href= '#Prices'>Prices</a>
-          <a href= '#Now Showing'>Now Showing</a>
-      </div>
-    </nav>
-
     <main>
-      <article id='About Us'>
+      <article id='About-Us'>
+        <h2>About Us</h2>
         <p>Lunardo Cinema has reopened after extensive improvements and renovations!<p>
-        <p>Our <b>Standard</b> cinema seats have been all received an upgrade <img width=10% height=10% src='../../media/standard.jpg'> <br>
-        and we have also finally opened our new <b>First Class</b> cinema! <img width=10% height=10% src='../../media/firstClass.png'></p>
-        <p>We're also happy to announce that our projection and sound systems are upgraded with <a href='https://www.dolby.com/us/en/brands/dolby-vision.html'>3D Dolby Vision </a> 
-        and <a href='https://www.dolby.com/us/en/technologies/cinema/dolby-atmos.html'> Dolby Atmos</a> sound.<p>
+        <p>-Our <b>Standard</b> cinema seats have been all received an upgrade  <br>
+        -We have also finally opened our new <b>First Class</b> cinema! <br>
+        -We're also happy to announce that our projection and sound systems are upgraded with <a href='https://www.dolby.com/us/en/brands/dolby-vision.html'>3D Dolby Vision </a> 
+        and <a href='https://www.dolby.com/us/en/technologies/cinema/dolby-atmos.html'> Dolby Atmos</a> sound.</p>
+
+        <img width=10% height=10% src='../../media/standard.png'>
+        <img width=10% height=10% src='../../media/firstClass.png'>
       </article>
 
       <article id ='Prices'>
-        <table border= 1>
+      <h2>Prices</h2>
+        <table>
             <tr>
               <td>Seat Type</td>
               <td>Seat Code</td>
@@ -82,7 +85,8 @@
         </table>
       </article>
 
-      <article id ='Now Showing'>
+      <article id ='Now-Showing'>
+      <h2>Now Showing</h2>
         <div>
           Avengers: Endgame
         </div>
@@ -95,12 +99,14 @@
         <div>
           The Happy Prince
         </div>
-
-        <h1>Avengers: Endgame</h1>
-        <h3>Synopsis</h3>
-        <p>After the devastating events of <b>Avengers: Infinity War (2018)</b>, the universe is in ruins. With the help of remaining allies, 
-        the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. (IMDB Avengers: Endgame 2019)</p>
-        <iframe width ="350" height = "200" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+      
+        <div id='endgame'>
+          <h1>Avengers: Endgame</h1>
+          <p>After the devastating events of <b>Avengers: Infinity War (2018)</b>, the universe is in ruins. With the help of remaining allies, 
+          the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. (IMDB Avengers: Endgame 2019)</p>
+          <iframe width ="350" height = "200" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
 
         <h3>Make a Booking:</h3>
         <!--Provide session times-->
@@ -108,7 +114,7 @@
 
         <!--Create a 'booking form' option-->
         <p>WIP: <i>booking form</i></p>
-      </article>
+
     </main>
 
     <footer>

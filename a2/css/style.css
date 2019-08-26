@@ -1,12 +1,61 @@
-/* Insert your styles here */
-p{
-    color:white;
-    background: black;
+html{
+    scroll-behavior: smooth;
 }
+
+body{
+    background-color: rgb(223, 64, 64);
+    background-image: url(https://titan.csit.rmit.edu.au/~s3784464/media/neon.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 15px;
+    color: white;
+}
+
+h2{
+    color: white;
+    background: rgb(24, 22, 22)
+}
+
 h3{
     color: white;
-    background: rgb(71, 61, 61);
+    background: rgb(44, 38, 38);
 }
-#mainHeading{
+
+#navbar{
+    border: 10px solid white;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    background: black;
+    font-family: sans-serif;
+}
+
+.lunardo{
+    font-size: 30px;
+}
+
+#About-Us{
     background: black;
 }
+
+#Prices{
+    background: black;
+}
+
+#Now-Showing{
+    background: black;
+}
+
+.links{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#endgame{
+    color: white;
+    background: purple;}
+
+#endgame h1{
+    color: white;
+    background: black;}
