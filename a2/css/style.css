@@ -13,7 +13,40 @@ header{
     color: #E2FCEF;
     background: #170F11;
     font-family: sans-serif;
+    border-radius: 0px 0px 40px 40px;
+    opacity: 0.9;
+}
+footer{
+    background: black;
+}
+table{
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid black;
+}
+tr:nth-child(even){
+    background-color: #69335d;
+}
+tr:hover {
+    background-color: rgb(119, 22, 175);
+}
 
+#navbar{
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+}
+#navbar a{
+    text-decoration: none;
+    color: #E2FCEF;
+    font-size: 30px;
+    padding: 20px;
+    text-align: left;
+}
+#navbar a:hover{
+    background-color: rgb(177, 11, 199);
+    color: white;
 }
 body{
     background-color: rgb(223, 64, 64);
@@ -24,19 +57,24 @@ body{
     padding: 0;
     margin: 0;
     color: #E2FCEF;
+    font-size: 25px;
 }
 
-h1{
-    margin:0;
+iframe{
+    display:block;
+    margin-right: auto;
 }
+
 h2{
-    color: white;
+    color: #E2FCEF;
     background: #170F11;
     margin:0;
+    font-size: 60px;
+    text-align: center;
 }
 
 h3{
-    color: white;
+    color: #E2FCEF;
     background: #170F11;
 }
 
@@ -44,12 +82,31 @@ main{
     padding-top: 100px;
 }
 
-#navbar a{
-    text-decoration: none;
-    color: #E2FCEF;
-    font-size: 30px;
-}
 
+.endgame {
+    width: 300px;
+    border: 15px solid rgb(177, 11, 199);
+    padding: 50px;
+    margin: 20px;
+  }
+  .theHappyPrince {
+    width: 300px;
+    border: 15px solid rgb(177, 11, 199);
+    padding: 50px;
+    margin: 20px;
+  }
+  .topEndWedding {
+    width: 300px;
+    border: 15px solid rgb(177, 11, 199);
+    padding: 50px;
+    margin: 20px;
+  }
+  .dumbo {
+    width: 300px;
+    border: 15px solid rgb(177, 11, 199);
+    padding: 50px;
+    margin: 20px;
+  }
 
 .lunardo{
     font-size: 30px;
@@ -84,7 +141,11 @@ main{
     font-weight: bold;
 }
 
-#endgame{
+#endgameShowcase{
     background: rgb(209, 9, 126);
+}
+
+#makeABooking{
+    background: rgb(102, 7, 63);
 }
 

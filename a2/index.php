@@ -13,12 +13,14 @@
 
   <body>
     <header>
-      <div class='lunardo'><h1>Lunardo Cinema</h1></div>
+      <div class='lunardo'>
+        <h1>Lunardo Cinema</h1> 
+        <img src ='../../media/logo.png/' alt='Logo'>
+      </div>
       <nav id="navbar">
-        <!-- for putting an icon next to heading <img src =../../media/logo.png/> -->
-          <a href= '#About-Us'>About Us</a> -
-          <a href= '#Prices' >Prices</a> -
-          <a href= '#Now-Showing'>Now Showing</a> 
+        <a href= '#About-Us'>About Us</a>
+        <a href= '#Prices' >Prices</a>
+        <a href= '#Now-Showing'>Now Showing</a> 
       </nav>
     </header>
 
@@ -85,33 +87,42 @@
 
       <article id ='Now-Showing'>
       <h2>Now Showing</h2>
-        <div>
-          Avengers: Endgame
+        <div class='endgame'>
+            <img src="" alt="Avengers: Endgame" width="600" height="400">
+          <div class="desc">Avengers: Endgame</div>
         </div>
-        <div>
-          Top End Wedding
+
+        <div class='topEndWedding'>
+            <img src="" alt="Top End Wedding" width="600" height="400">
+          <div class="desc">Top End Wedding</div>
         </div>
-        <div>
-          Dumbo
+
+        <div class='dumbo'>
+            <img src="" alt="Dumbo" width="600" height="400">
+          <div class="desc">Dumbo</div>
         </div>
-        <div>
-          The Happy Prince
+
+        <div class='theHappyPrince'>
+            <img src="" alt="The Happy Prince" width="600" height="400">
+          <div class="desc">The Happy Prince</div>
         </div>
       </article>
 
-        <div id='endgame'>
-          <h1>Avengers: Endgame</h1>
+        <div id='endgameShowcase'>
+          <h2>Avengers: Endgame</h2>
           <p>After the devastating events of <b>Avengers: Infinity War (2018)</b>, the universe is in ruins. With the help of remaining allies, 
           the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. (IMDB Avengers: Endgame 2019)</p>
-          <iframe width ="350" height = "200" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width ="700" height = "400" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
 
+        <article id = 'makeABooking'>
         <h3>Make a Booking:</h3>
         <!--Provide session times-->
         <p>WIP: <i>session times</i></p>
 
         <!--Create a 'booking form' option-->
         <p>WIP: <i>booking form</i></p>
+        </article>
 
     </main>
 
