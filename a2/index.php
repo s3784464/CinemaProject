@@ -14,8 +14,8 @@
   <body>
     <header>
       <div class='lunardo'>
-        <h1>Lunardo Cinema</h1> 
-        <img src ='../../media/logo.png/' alt='Logo'>
+       <img src ='../../media/logo.png' alt='Logo' height=100px> <h1>Lunardo Cinema</h1> 
+        
       </div>
       <nav id="navbar">
         <a href= '#About-Us'>About Us</a>
@@ -41,43 +41,43 @@
       <h2>Prices</h2>
         <table>
             <tr>
-              <td>Seat Type</td>
-              <td>Seat Code</td>
-              <td>All day Monday and Wednesday AND 12pm on Weekdays</td>
-              <td>All other times</td>
+              <td class="topTable">Seat Type</td>
+              <td class="topTable">Seat Code</td>
+              <td class="topTable">All day Monday and Wednesday AND 12pm on Weekdays</td>
+              <td class="topTable">All other times</td>
             </tr>
             <tr>
-              <td>Standard Adult</td>
+              <td class="leftTable">Standard Adult</td>
               <td>STA</td>
               <td>14.00</td>
               <td>19.80</td>
             </tr>
             <tr>
-              <td>Standard Concession</td>
+              <td class="leftTable">Standard Concession</td>
               <td>STP</td>
               <td>12.50</td>
               <td>17.50</td>
             </tr>
             <tr>
-              <td>Standard Child</td>
+              <td class="leftTable">Standard Child</td>
               <td>STC</td>
               <td>11.00</td>
               <td>15.30</td>
             </tr>
             <tr>
-              <td>First Class Adult</td>
+              <td class="leftTable">First Class Adult</td>
               <td>FCA</td>
               <td>24.00</td>
               <td>30.00</td>
             </tr>
             <tr>
-              <td>First Class Concession</td>
+              <td class="leftTable">First Class Concession</td>
               <td>FCP</td>
               <td>22.50</td>
               <td>27.00</td>
             </tr>
             <tr>
-              <td>First Class Child</td>
+              <td class="leftTable">First Class Child</td>
               <td>FCC</td>
               <td>21.00</td>
               <td>24.00</td>
@@ -87,25 +87,56 @@
 
       <article id ='Now-Showing'>
       <h2>Now Showing</h2>
+      <div class='nowShowing'>
         <div class='endgame'>
-            <img src="" alt="Avengers: Endgame" width="600" height="400">
-          <div class="desc">Avengers: Endgame</div>
+            <img src="../../media/endgame.jpg" alt="Avengers: Endgame" width="600" height="400">
+          <div class="desc"><h4>Avengers: Endgame</h4>
+            <h4>PG</h4>
+            <p>Wednesday - 9pm</p>
+            <p>Thursday - 9pm</p>
+            <p>Friday - 9pm</p>
+            <p>Saturday - 6pm</p>
+            <p>Sunday - 6pm</p>
+          </div>
         </div>
 
         <div class='topEndWedding'>
-            <img src="" alt="Top End Wedding" width="600" height="400">
-          <div class="desc">Top End Wedding</div>
+            <img src="../../media/topendwedding.jpg" alt="Top End Wedding" width="600" height="400">
+          <div class="desc"><h4>Top End Wedding</h4>
+          <h4>M</h4>
+            <p>Monday - 6pm</p>
+            <p>Tuesday - 6pm</p>
+            <p>Saturday - 12pm</p>
+            <p>Sunday - 12pm</p>
+          </div>
         </div>
 
         <div class='dumbo'>
-            <img src="" alt="Dumbo" width="600" height="400">
-          <div class="desc">Dumbo</div>
+            <img src="../../media/dumbo.jpg" alt="Dumbo" width="600" height="400">
+          <div class="desc"><h4>Dumbo</h4>
+            <h4>PG</h4>
+            <p>Monday - 12pm</p>
+            <p>Tuesday - 12pm</p>
+            <p>Wednesday - 6pm</p>
+            <p>Thursday - 6pm</p>
+            <p>Friday - 6pm</p>
+            <p>Saturday - 12pm</p>
+            <p>Sunday - 12pm</p>
+          </div>
         </div>
 
         <div class='theHappyPrince'>
-            <img src="" alt="The Happy Prince" width="600" height="400">
-          <div class="desc">The Happy Prince</div>
+            <img src="../../media/thehappyprince.jpg" alt="The Happy Prince" width="600" height="400">
+          <div class="desc"><h4>The Happy Prince</h4>
+          <h4>R 18+</h4>
+            <p>Wednesday - 12pm</p>
+            <p>Thursday - 12pm</p>
+            <p>Friday - 12pm</p>
+            <p>Saturday - 9pm</p>
+            <p>Sunday - 9pm</p>
+          </div>
         </div>
+      </div>
       </article>
 
         <div id='endgameShowcase'>
@@ -113,15 +144,21 @@
           <p>After the devastating events of <b>Avengers: Infinity War (2018)</b>, the universe is in ruins. With the help of remaining allies, 
           the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. (IMDB Avengers: Endgame 2019)</p>
           <iframe width ="700" height = "400" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <article id = 'makeABooking'>
+          <h3>Make a Booking:</h3>
+            <p>Wednesday - 9pm</p>
+            <p>Thursday - 9pm</p>
+            <p>Friday - 9pm</p>
+            <p>Saturday - 6pm</p>
+            <p>Sunday - 6pm</p>
           </div>
+        </div>
 
-        <article id = 'makeABooking'>
-        <h3>Make a Booking:</h3>
-        <!--Provide session times-->
-        <p>WIP: <i>session times</i></p>
+        
 
+        <article id=bookingForm>
         <!--Create a 'booking form' option-->
-        <p>WIP: <i>booking form</i></p>
+        <p>WIP: <i>Booking Form</i></p>
         </article>
 
     </main>
