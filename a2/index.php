@@ -7,7 +7,7 @@
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-    <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
+    <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
     <script src='../wireframe.js'></script>
   </head>
 
@@ -27,14 +27,26 @@
     <main>
       <article id='About-Us'>
         <h2>About Us</h2>
-        <p>Lunardo Cinema has reopened after extensive improvements and renovations!<p>
-        <p>-Our <b>Standard</b> cinema seats have been all received an upgrade  <br>
-        -We have also finally opened our new <b>First Class</b> cinema! <br>
-        -We're also happy to announce that our projection and sound systems are upgraded with <a href='https://www.dolby.com/us/en/brands/dolby-vision.html'>3D Dolby Vision </a> 
-        and <a href='https://www.dolby.com/us/en/technologies/cinema/dolby-atmos.html'> Dolby Atmos</a> sound.</p>
+        <p>Lunardo Cinema has reopened after receiving extensive improvements and multiple renovations including:<p>
+        <ul>
+          <li>The <b>Standard</b> cinema seats have been all been replaced and upgraded (see below)</li>
+          <li>The launch of our new <i>brand new</i> <b>First Class</b> cinema! (see below) </li>
+          <li>Our projection and sound systems have all been upgraded with the latest <a href='https://www.dolby.com/us/en/brands/dolby-vision.html'>3D Dolby Vision </a> 
+        and <a href='https://www.dolby.com/us/en/technologies/cinema/dolby-atmos.html'> Dolby Atmos</a> sound. </li>
+      </ul>
 
-        <img width=10% height=10% src='../../media/standard.png'>
-        <img width=10% height=10% src='../../media/firstClass.png'>
+      <div class="hoverPics">
+        <span class="imageContainer">
+          <p class="classText">Standard Seats</p>
+          <img src='../../media/standard.png' alt="standard" class="Image">
+        </span>
+
+        <span class="imageContainer">
+          <p class="classText">First Class Seats</p>
+          <img src='../../media/firstClass.png' alt="firstClass" class="Image">
+        </span>
+      </div>
+
       </article>
 
       <article id ='Prices'>
@@ -85,8 +97,9 @@
         </table>
       </article>
 
-      <article id ='Now-Showing'>
-      <h2>Now Showing</h2>
+    <article id ='Now-Showing'>
+    <h2>Now Showing</h2>
+    <div class="showcases">
       <div class='nowShowing'>
         <div class='endgame'>
             <img src="../../media/endgame.jpg" alt="Avengers: Endgame" width="600" height="400">
@@ -99,7 +112,7 @@
             <p>Sunday - 6pm</p>
           </div>
         </div>
-
+      
         <div class='topEndWedding'>
             <img src="../../media/topendwedding.jpg" alt="Top End Wedding" width="600" height="400">
           <div class="desc"><h4>Top End Wedding</h4>
@@ -137,22 +150,25 @@
           </div>
         </div>
       </div>
-      </article>
+    </article>
 
         <div id='endgameShowcase'>
-          <h2>Avengers: Endgame</h2>
+          <div id='endgameHeading'>
+            <h2>Avengers: Endgame</h2>
+            <span class="pg">PG</span>
+          </div>
+          <iframe width ="700" height = "400" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <p>After the devastating events of <b>Avengers: Infinity War (2018)</b>, the universe is in ruins. With the help of remaining allies, 
           the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. (IMDB Avengers: Endgame 2019)</p>
-          <iframe width ="700" height = "400" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          
           <article id = 'makeABooking'>
-          <h3>Make a Booking:</h3>
-            <p>Wednesday - 9pm</p>
-            <p>Thursday - 9pm</p>
-            <p>Friday - 9pm</p>
-            <p>Saturday - 6pm</p>
-            <p>Sunday - 6pm</p>
+          <p id="makeabooking">Make a Booking:<p>
+            <span class='avengersTime'> Wednesday - 9pm</span>
+            <span class='avengersTime'>Thursday - 9pm</span>
+            <span class='avengersTime'>Friday - 9pm</span>
+            <span class='avengersTime'>Saturday - 6pm</span>
+            <span class='avengersTime'>Sunday - 6pm</span>
           </div>
-        </div>
 
         
 
@@ -172,7 +188,7 @@
       <a href='https://www.google.com/maps/place/123+La+Trobe+St,+Melbourne+VIC+3000/@-37.8086568,144.9655973,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad642cebf245a07:0x258769ae7754af!8m2!3d-37.8086568!4d144.967786'>
         123 La Trobe St, Melbourne
       </a><br>
-      Jonathon Mitterbacher - s3784464 <a href='https://github.com/s3784464/wp'>- GitHub Repository </a>- Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+      Jonathon Mitterbacher - s3784464 - <a href='https://github.com/s3784464/wp'>GitHub Repository </a>- Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
