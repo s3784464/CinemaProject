@@ -6,15 +6,16 @@ html{
 header{
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 100%;
+    width: 100vw;
+    height: 6vw;
     position: fixed;
     border: 0;
-    color: #E2FCEF;
-    background: rgba(23, 15, 17, 0.815);
+    color: rgb(239, 226, 252);
+    background: rgba(23, 15, 17, 0.822);
     font-family: sans-serif;
     border-radius: 0px 0px 40px 40px;
+    padding-bottom:0;
 }
-
 header img{
     float: left;
     clear: left;
@@ -23,32 +24,30 @@ header img{
     margin-top: -1%;
     margin-bottom: 0%;
     padding: 0;
-    width: 140px;
-    height: auto;
+    width: auto;
+    height: 6vw;
 }
 .lunardo{
-    font-size: 40px;
+    font-size: 2.3vw;
     padding: 0;
     margin:0;
-    height: 90px;
 }
 header .lunardo h1{
-    width: 100%;
+    width: 100vw;
     padding: 0px;
     margin: 0px;
 }
-
-
 #navbar{
     text-align: center;
-    padding: 30px;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
     font-weight: bold;
+    font-size: 3vw;
 }
-
 #navbar a{
     text-decoration: none;
     color: #E2FCEF;
-    font-size: 30px;
+    font-size: 2.5vw;
     margin-left: 8px;
     margin-right: 8px;
     text-align: left;
@@ -60,7 +59,6 @@ header .lunardo h1{
 }
 
 body{
-    background-color: rgb(223, 64, 64);
     background-image: url(https://titan.csit.rmit.edu.au/~s3784464/media/neon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -68,13 +66,11 @@ body{
     padding: 0;
     margin: 0;
     color: #E2FCEF;
-    font-size: 25px;
 }
-
 h2{
     color: #E2FCEF;
-    background: #170F11;
-    margin:0;
+    background:#170F11;
+    margin: 0px, 10px, 0px, 10px;
     font-size: 65px;
     text-align: center;
 }
@@ -84,61 +80,78 @@ h3{
     background: #170F11;
 }
 
-main{
-    padding-top: 100px;
-}
-
 #About-Us{
+    padding-top: 6vw;  
+    font-size: 2.05vw;
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
-    background: rgb(185, 25, 190);
 }
 
+#aboutUsInfo{
+    background-image: linear-gradient(to right, rgb(40, 7, 94) , rgb(166, 37, 226));
+}
+
+
 #About-Us img{
-    border: solid rgb(222, 5, 230) 5px;
-      margin: 0px;
-      padding: 0px;
+    margin: 0px;
+    padding: 0px;
   }
 
 #About-Us a{
     text-decoration: underline;
-    color: black;
+    font-weight: bold;
+    color: rgb(237, 171, 247);
     
 }
 #About-Us p{
-    margin: 10px;
+    margin-top: 1vw;
+    margin-left: 4vw;
+    margin-bottom: 0;
+    padding-bottom:0;
+}
+
+#About-Us ul{
+    margin-left: 3vw;
 }
 
 .Image {
-    display: none;
-    width: 80%;
+    display: inline-block;
+    width: 14vw;
     height: auto;
 }
 
-.classText:hover ~ .Image {
-    display: inline;  
+.imageContainer:hover:after{
+    display: none;
 }
 
 span.imageContainer{
-    border: solid black 5px;
-    width: 300px;
-    height: 400px;
+    border: solid black 3px;
+    width: 20vw;
+    height: 15vw;
+    text-align: center;
+}
+
+.imageContainer{
+    background-image: linear-gradient(to left, rgb(40, 7, 94) , rgb(166, 37, 226));
+    margin-left: 4vw;
 }
 
 .hoverPics{
     display: grid;
-    grid-template-columns: 30% 70%;
-    width: 98%;
-    padding: 1%;
+    grid-template-columns: 50% 50%;
+    width:80vw;
     margin: 0%;
+    padding-bottom: 1vw;
+    padding-left: 7vw;
+    padding-right: 0;
     border: 0%;
     font-size: 40px;
     font-weight: bold;
 }
 
 #Prices{
-    margin-top: 20px;
+    padding-top: 6vw; 
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -148,11 +161,14 @@ span.imageContainer{
 table{
     border-collapse: collapse;
     width: 100%;
-    font-size: 30px;
+    font-size: 40px;
+    height: 15vw;
 }
 
 table, th, td{
     border: 1px solid black;
+    height: 4vw;
+    text-align: center;
 }
 
 tr:nth-child(even){
@@ -169,7 +185,12 @@ table .topTable{
 }
 
 #Now-Showing{
-    margin-top: 20px;
+    padding-top: 6vw;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#Now-Showing #nowShowingContainter{
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -225,8 +246,8 @@ li{
         
     }
     .theHappyPrince {
-        border: 3px solid rgb(7, 11, 226);
-        background: rgb(63, 133, 173);
+        border: 3px solid rgb(59, 159, 253);
+        background: rgb(13, 83, 189);
         margin:20px;
     }
     .topEndWedding {
@@ -240,7 +261,6 @@ li{
         background: rgb(129, 22, 76);
         margin:20px;
     }
-}
 
 .links{
     color: white;
@@ -266,6 +286,7 @@ span.avengersTime:hover{
     overflow: auto;
     margin-left: 10px;
     margin-right: 10px;
+    font-size: 25px;
 }
 #endgameShowcase h2 { 
     display: inline;
@@ -316,6 +337,8 @@ span.avengersHeading{
 }
 
 footer{
-    background: black;
-    border-radius: 0px 0px 0px 0px;
+    text-align: center;
+    background: rgb(15, 3, 19);
+    border-radius: 100px 100px 0px 0px;
+    border: solid rgb(63, 6, 102) 2px;
 }

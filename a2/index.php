@@ -18,137 +18,147 @@
         
       </div>
       <nav id="navbar">
-        <a href= '#About-Us'>About Us</a>
-        <a href= '#Prices' >Prices</a>
-        <a href= '#Now-Showing'>Now Showing</a> 
+        <a href= '#About-Us' id="navAboutUs" onclick="highlightNavChoice('navAboutUs')">About Us</a>
+        <a href= '#Prices' id="navPrices" onclick="highlightNavChoice('navPrices')">Prices</a>
+        <a href= '#Now-Showing' id="navNowShowing" onclick="highlightNavChoice('navNowShowing')">Now Showing</a> 
       </nav>
     </header>
 
     <main>
       <article id='About-Us'>
-        <h2>About Us</h2>
-        <p>Lunardo Cinema has reopened after receiving extensive improvements and multiple renovations including:<p>
-        <ul>
-          <li>The <b>Standard</b> cinema seats have been all been replaced and upgraded (see below)</li>
-          <li>The launch of our new <i>brand new</i> <b>First Class</b> cinema! (see below) </li>
-          <li>Our projection and sound systems have all been upgraded with the latest <a href='https://www.dolby.com/us/en/brands/dolby-vision.html'>3D Dolby Vision </a> 
-        and <a href='https://www.dolby.com/us/en/technologies/cinema/dolby-atmos.html'> Dolby Atmos</a> sound. </li>
-      </ul>
+        <div id='aboutUsInfo'>
+          <h2>About Us</h2>
+          <p>Lunardo Cinema has reopened after receiving extensive improvements and multiple renovations including:<p>
+          <ul>
+            <li>The <b>Standard</b> cinema seats have been all been replaced and upgraded (see below)</li>
+            <li>The launch of our new <i>brand new</i> <b>First Class</b> cinema! (see below) </li>
+            <li>Our projection and sound systems have all been upgraded with the latest 
+              <a href='https://www.dolby.com/us/en/brands/dolby-vision.html' target="_blank">3D Dolby Vision </a> and
+              <a href='https://www.dolby.com/us/en/technologies/cinema/dolby-atmos.html' target="_blank"> Dolby Atmos</a> sound. </li>
+        </ul>
 
-      <div class="hoverPics">
-        <span class="imageContainer">
-          <p class="classText">Standard Seats</p>
-          <img src='../../media/standard.png' alt="standard" class="Image">
-        </span>
+          <div class="hoverPics">
+            <span class="imageContainer">
+              <div id="standardSeats" class="classText">Standard Seats
+                <img src='../../media/standard.png' alt="standard" class="Image">
+              </div>
+            </span>
 
-        <span class="imageContainer">
-          <p class="classText">First Class Seats</p>
-          <img src='../../media/firstClass.png' alt="firstClass" class="Image">
-        </span>
-      </div>
+            <span class="imageContainer">
+              <div id="firstClassSeats" class="classText">First Class Seats
+                <img src='../../media/firstClass.png' alt="firstClass" class="Image">
+              </div>
+            </span>
+          </div>
+        </div>
 
       </article>
 
       <article id ='Prices'>
-      <h2>Prices</h2>
-        <table>
-            <tr>
-              <td class="topTable">Seat Type</td>
-              <td class="topTable">Seat Code</td>
-              <td class="topTable">All day Monday and Wednesday AND 12pm on Weekdays</td>
-              <td class="topTable">All other times</td>
-            </tr>
-            <tr>
-              <td class="leftTable">Standard Adult</td>
-              <td>STA</td>
-              <td>14.00</td>
-              <td>19.80</td>
-            </tr>
-            <tr>
-              <td class="leftTable">Standard Concession</td>
-              <td>STP</td>
-              <td>12.50</td>
-              <td>17.50</td>
-            </tr>
-            <tr>
-              <td class="leftTable">Standard Child</td>
-              <td>STC</td>
-              <td>11.00</td>
-              <td>15.30</td>
-            </tr>
-            <tr>
-              <td class="leftTable">First Class Adult</td>
-              <td>FCA</td>
-              <td>24.00</td>
-              <td>30.00</td>
-            </tr>
-            <tr>
-              <td class="leftTable">First Class Concession</td>
-              <td>FCP</td>
-              <td>22.50</td>
-              <td>27.00</td>
-            </tr>
-            <tr>
-              <td class="leftTable">First Class Child</td>
-              <td>FCC</td>
-              <td>21.00</td>
-              <td>24.00</td>
-            </tr>
-        </table>
+        <div>
+          <h2>Prices</h2>
+          <table>
+              <tr>
+                <td class="topTable">Seat Type</td>
+                <td class="topTable">Seat Code</td>
+                <td class="topTable">All day Monday and Wednesday AND 12pm on Weekdays</td>
+                <td class="topTable">All other times</td>
+              </tr>
+              <tr>
+                <td class="leftTable">Standard Adult</td>
+                <td>STA</td>
+                <td>14.00</td>
+                <td>19.80</td>
+              </tr>
+              <tr>
+                <td class="leftTable">Standard Concession</td>
+                <td>STP</td>
+                <td>12.50</td>
+                <td>17.50</td>
+              </tr>
+              <tr>
+                <td class="leftTable">Standard Child</td>
+                <td>STC</td>
+                <td>11.00</td>
+                <td>15.30</td>
+              </tr>
+              <tr>
+                <td class="leftTable">First Class Adult</td>
+                <td>FCA</td>
+                <td>24.00</td>
+                <td>30.00</td>
+              </tr>
+              <tr>
+                <td class="leftTable">First Class Concession</td>
+                <td>FCP</td>
+                <td>22.50</td>
+                <td>27.00</td>
+              </tr>
+              <tr>
+                <td class="leftTable">First Class Child</td>
+                <td>FCC</td>
+                <td>21.00</td>
+                <td>24.00</td>
+              </tr>
+          </table>
+        </div>
       </article>
 
     <article id ='Now-Showing'>
-    <h2>Now Showing</h2>
-    <div class="showcases">
-      <div class='nowShowing'>
-        <div class='endgame'>
-            <img src="../../media/endgame.jpg" alt="Avengers: Endgame" width="600" height="400">
-          <div class="desc"><h4>Avengers: Endgame</h4>
-            <h4>PG</h4>
-            <p>Wednesday - 9pm</p>
-            <p>Thursday - 9pm</p>
-            <p>Friday - 9pm</p>
-            <p>Saturday - 6pm</p>
-            <p>Sunday - 6pm</p>
-          </div>
-        </div>
-      
-        <div class='topEndWedding'>
-            <img src="../../media/topendwedding.jpg" alt="Top End Wedding" width="600" height="400">
-          <div class="desc"><h4>Top End Wedding</h4>
-          <h4>M</h4>
-            <p>Monday - 6pm</p>
-            <p>Tuesday - 6pm</p>
-            <p>Saturday - 12pm</p>
-            <p>Sunday - 12pm</p>
-          </div>
-        </div>
+      <div id=nowShowingContainer>
+        <h2>Now Showing</h2>
+        <div class="showcases">
+          <div class='nowShowing'>
 
-        <div class='dumbo'>
-            <img src="../../media/dumbo.jpg" alt="Dumbo" width="600" height="400">
-          <div class="desc"><h4>Dumbo</h4>
-            <h4>PG</h4>
-            <p>Monday - 12pm</p>
-            <p>Tuesday - 12pm</p>
-            <p>Wednesday - 6pm</p>
-            <p>Thursday - 6pm</p>
-            <p>Friday - 6pm</p>
-            <p>Saturday - 12pm</p>
-            <p>Sunday - 12pm</p>
-          </div>
-        </div>
+            <div class='endgame'>
+                <img src="../../media/endgame.jpg" alt="Avengers: Endgame" width="600" height="400">
+              <div class="desc"><h4>Avengers: Endgame</h4>
+                <h4>PG</h4>
+                <p>Wednesday - 9pm</p>
+                <p>Thursday - 9pm</p>
+                <p>Friday - 9pm</p>
+                <p>Saturday - 6pm</p>
+                <p>Sunday - 6pm</p>
+              </div>
+            </div>
+          
+            <div class='topEndWedding'>
+                <img src="../../media/topendwedding.jpg" alt="Top End Wedding" width="600" height="400">
+              <div class="desc"><h4>Top End Wedding</h4>
+              <h4>M</h4>
+                <p>Monday - 6pm</p>
+                <p>Tuesday - 6pm</p>
+                <p>Saturday - 12pm</p>
+                <p>Sunday - 12pm</p>
+              </div>
+            </div>
 
-        <div class='theHappyPrince'>
-            <img src="../../media/thehappyprince.jpg" alt="The Happy Prince" width="600" height="400">
-          <div class="desc"><h4>The Happy Prince</h4>
-          <h4>R 18+</h4>
-            <p>Wednesday - 12pm</p>
-            <p>Thursday - 12pm</p>
-            <p>Friday - 12pm</p>
-            <p>Saturday - 9pm</p>
-            <p>Sunday - 9pm</p>
+            <div class='dumbo'>
+                <img src="../../media/dumbo.jpg" alt="Dumbo" width="600" height="400">
+              <div class="desc"><h4>Dumbo</h4>
+                <h4>PG</h4>
+                <p>Monday - 12pm</p>
+                <p>Tuesday - 12pm</p>
+                <p>Wednesday - 6pm</p>
+                <p>Thursday - 6pm</p>
+                <p>Friday - 6pm</p>
+                <p>Saturday - 12pm</p>
+                <p>Sunday - 12pm</p>
+              </div>
+            </div>
+
+            <div class='theHappyPrince'>
+                <img src="../../media/thehappyprince.jpg" alt="The Happy Prince" width="600" height="400">
+              <div class="desc"><h4>The Happy Prince</h4>
+              <h4>R 18+</h4>
+                <p>Wednesday - 12pm</p>
+                <p>Thursday - 12pm</p>
+                <p>Friday - 12pm</p>
+                <p>Saturday - 9pm</p>
+                <p>Sunday - 9pm</p>
+              </div>
+            </div>
           </div>
-        </div>
       </div>
     </article>
 
@@ -174,7 +184,103 @@
 
         <article id=bookingForm>
         <!--Create a 'booking form' option-->
-        <p>WIP: <i>Booking Form</i></p>
+          <p>WIP: <i>Booking Form</i></p>
+          <h3>Movie Title - Day - Time</h3>
+          <div id=standard>
+            <form>
+            <h5>Standard</h5>
+              Adults
+              <select name="adult">
+                <option value= ''> </option>
+                <option value= 1>1</option>
+                <option value= 2>2</option>
+                <option value= 3>3</option>
+                <option value= 4>4</option>
+                <option value= 5>5</option>
+                <option value= 6>6</option>
+                <option value= 7>7</option>
+                <option value= 8>8</option>
+                <option value= 9>9</option>
+                <option value= 10>10</option>
+              </select>
+              <br>Concession
+              <select name="concession">
+                <option value= ''> </option>
+                <option value= 1>1</option>
+                <option value= 2>2</option>
+                <option value= 3>3</option>
+                <option value= 4>4</option>
+                <option value= 5>5</option>
+                <option value= 6>6</option>
+                <option value= 7>7</option>
+                <option value= 8>8</option>
+                <option value= 9>9</option>
+                <option value= 10>10</option>
+              </select>
+              <br>Children
+              <select name="children">
+                <option value= ''> </option>
+                <option value= 1>1</option>
+                <option value= 2>2</option>
+                <option value= 3>3</option>
+                <option value= 4>4</option>
+                <option value= 5>5</option>
+                <option value= 6>6</option>
+                <option value= 7>7</option>
+                <option value= 8>8</option>
+                <option value= 9>9</option>
+                <option value= 10>10</option>
+              </select>
+          </form>
+          </div>
+
+          <div id=concession>
+            <form>
+            <h5>Concession</h5>
+              Adults
+              <select name="adult">
+                <option value= ''> </option>
+                <option value= 1>1</option>
+                <option value= 2>2</option>
+                <option value= 3>3</option>
+                <option value= 4>4</option>
+                <option value= 5>5</option>
+                <option value= 6>6</option>
+                <option value= 7>7</option>
+                <option value= 8>8</option>
+                <option value= 9>9</option>
+                <option value= 10>10</option>
+              </select>
+              <br>Concession
+              <select name="concession">
+                <option value= ''> </option>
+                <option value= 1>1</option>
+                <option value= 2>2</option>
+                <option value= 3>3</option>
+                <option value= 4>4</option>
+                <option value= 5>5</option>
+                <option value= 6>6</option>
+                <option value= 7>7</option>
+                <option value= 8>8</option>
+                <option value= 9>9</option>
+                <option value= 10>10</option>
+              </select>
+              <br>Children
+              <select name="children">
+                <option value= ''> </option>
+                <option value= 1>1</option>
+                <option value= 2>2</option>
+                <option value= 3>3</option>
+                <option value= 4>4</option>
+                <option value= 5>5</option>
+                <option value= 6>6</option>
+                <option value= 7>7</option>
+                <option value= 8>8</option>
+                <option value= 9>9</option>
+                <option value= 10>10</option>
+              </select>
+          </form>
+          </div>
         </article>
 
     </main>
@@ -193,5 +299,6 @@
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
 
+    <script src="../a3/script.js"></script>
   </body>
 </html>
