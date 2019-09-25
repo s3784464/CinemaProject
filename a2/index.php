@@ -34,7 +34,7 @@
             <li>The launch of our new <i>brand new</i> <b>First Class</b> cinema! (see below) </li>
             <li>Our projection and sound systems have all been upgraded with the latest 
               <a href='https://www.dolby.com/us/en/brands/dolby-vision.html' target="_blank">3D Dolby Vision </a> and
-              <a href='https://www.dolby.com/us/en/technologies/cinema/dolby-atmos.html' target="_blank"> Dolby Atmos</a> sound. </li>
+              <a href='https://www.dolby.com/us/en/technologies/cinema/dolby-atmos.html' target="_blank"> Dolby Atmos</a> sound </li>
         </ul>
 
           <div class="hoverPics">
@@ -61,7 +61,7 @@
               <tr>
                 <td class="topTable">Seat Type</td>
                 <td class="topTable">Seat Code</td>
-                <td class="topTable">All day Monday and Wednesday AND 12pm on Weekdays</td>
+                <td class="topTable">ALL day Monday & Wednesday, 12pm other Weekdays</td>
                 <td class="topTable">All other times</td>
               </tr>
               <tr>
@@ -110,7 +110,7 @@
         <div class="showcases">
           <div class='nowShowing'>
 
-            <div class='endgame'>
+            <div class='endgame' onclick = "showSynopsis('endgameShowcase')">
                 <img src="../../media/endgame.jpg" alt="Avengers: Endgame" width="600" height="400">
               <div class="desc"><h4>Avengers: Endgame</h4>
                 <h4>PG</h4>
@@ -122,7 +122,7 @@
               </div>
             </div>
           
-            <div class='topEndWedding'>
+            <div class='topEndWedding' onclick = "showSynopsis('topEndWedding')">
                 <img src="../../media/topendwedding.jpg" alt="Top End Wedding" width="600" height="400">
               <div class="desc"><h4>Top End Wedding</h4>
               <h4>M</h4>
@@ -133,7 +133,7 @@
               </div>
             </div>
 
-            <div class='dumbo'>
+            <div class='dumbo' onclick = "showSynopsis('dumbo')">
                 <img src="../../media/dumbo.jpg" alt="Dumbo" width="600" height="400">
               <div class="desc"><h4>Dumbo</h4>
                 <h4>PG</h4>
@@ -147,7 +147,7 @@
               </div>
             </div>
 
-            <div class='theHappyPrince'>
+            <div class='theHappyPrince' onclick = "showSynopsis('theHappyPrince')">
                 <img src="../../media/thehappyprince.jpg" alt="The Happy Prince" width="600" height="400">
               <div class="desc"><h4>The Happy Prince</h4>
               <h4>R 18+</h4>
@@ -168,11 +168,12 @@
             <span class="pg">PG</span>
           </div>
           <iframe width ="700" height = "400" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>After the devastating events of <b>Avengers: Infinity War (2018)</b>, the universe is in ruins. With the help of remaining allies, 
-          the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. (IMDB Avengers: Endgame 2019)</p>
+          <p>"After the devastating events of "<b>Avengers: Infinity War (2018)</b>", the universe is in ruins. With the help of remaining allies, 
+          the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. "<b>(IMDB Avengers: Endgame 2019)</b>
+          </p>
           
           <article id = 'makeABooking'>
-          <p id="makeabooking">Make a Booking:<p>
+          <p id="makeabooking">Make a Booking:</p>
             <span class='avengersTime'> Wednesday - 9pm</span>
             <span class='avengersTime'>Thursday - 9pm</span>
             <span class='avengersTime'>Friday - 9pm</span>
@@ -288,7 +289,7 @@
             Mobile<input type="text" name="mobile" required><br>
             Credit Card<input type="text" name="creditCard" required><br>
             Expiry<select name="expiryMonth" required>
-                <option value = ''></option>
+                <option value = ''>MM</option>
                 <option value = '1'>1</option>
                 <option value = '2'>2</option>
                 <option value = '3'>3</option>
@@ -304,12 +305,12 @@
               </select>
 
               <select name="expiryYear" required>
-                <option value =""></option>
-                <option value ="19">19</option>
-                <option value ="20">20</option>
-                <option value ="21">21</option>
-                <option value ="22">22</option>
-                <option value ="23">23</option>
+                <option value ="">YYYY</option>
+                <option value ="19">2019</option>
+                <option value ="20">2020</option>
+                <option value ="21">2021</option>
+                <option value ="22">2022</option>
+                <option value ="23">2023</option>
               </select>
 
             <br>

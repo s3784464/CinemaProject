@@ -37,3 +37,10 @@ window.onscroll = function(){
     console.log(navlinks);
 }
 
+function showSynopsis(movieClick){
+    var movieChoice = document.getElementById(movieClick);
+
+    endgameSynopsis = document.getElementById('endgameShowcase');
+    movieChoice.style.display = inline-block;
+    endgameSynopsis.style.display = inline-block;
+}

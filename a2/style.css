@@ -93,7 +93,7 @@ h3{
 }
 
 #aboutUsInfo{
-    background-image: linear-gradient(to right, rgb(40, 7, 94) , rgb(166, 37, 226));
+    background-image: linear-gradient(to top, rgb(40, 7, 94) , rgb(166, 37, 226));
     border-radius:25px;
 }
 
@@ -111,13 +111,13 @@ h3{
 }
 #About-Us p{
     margin-top: 1vw;
-    margin-left: 4vw;
+    margin-left: 3vw;
     margin-bottom: 0;
     padding-bottom:0;
 }
 
 #About-Us ul{
-    margin-left: 3vw;
+    margin-left: 1vw;
 }
 
 .Image {
@@ -131,20 +131,17 @@ h3{
 }
 
 span.imageContainer{
-    border: solid black 3px;
+    background: rgb(19, 18, 18);
+    margin-left: 17vw;
+    border: solid rgb(175, 173, 173) 3px;
     width: 20vw;
     height: 15vw;
     text-align: center;
 }
 
-.imageContainer{
-    background-image: linear-gradient(to left, rgb(40, 7, 94) , rgb(166, 37, 226));
-    margin-left: 4vw;
-}
-
 .hoverPics{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 35% 65%;
     width:80vw;
     margin: 0%;
     padding-bottom: 1vw;
@@ -166,7 +163,7 @@ span.imageContainer{
 table{
     border-collapse: collapse;
     width: 100%;
-    font-size: 40px;
+    font-size: 35px;
     height: 15vw;
 }
 
@@ -234,42 +231,51 @@ table .topTable{
 }
 
 .nowShowing h4{
-    font-size: 50px;
+    font-size: 4vw;
     padding: 0px;
     margin: 1vw;
     margin-top:0;
 }
-@media only screen and (max-width: 1000px){ 
-    .nowShowing{
-        display: block;
-    }
-}
+
 
 li{
     list-style-type: circle;
 }
 
-    .endgame {
-        border: 3px solid rgb(177, 11, 199);
-        background: rgb(83, 9, 143);
-        margin: 0 20px 20px 0;
-    }
-    .topEndWedding {
-        border: 3px solid rgb(226, 204, 7);
-        background: rgb(221, 137, 28);
-        margin: 0 0 20px 20px;
-    }
-    .dumbo {
-        border: 3px solid rgb(218, 22, 97);
-        background: rgb(129, 22, 76);
-        margin: 20px 20px 0 0;
-    }
-    .theHappyPrince {
-        border: 3px solid rgb(59, 159, 253);
-        background: rgb(13, 83, 189);
-        margin: 20px 0 0 20px;
-    }
-    
+.endgame {
+    border: 3px solid rgb(177, 11, 199);
+    background: rgb(83, 9, 143);
+    margin: 0 20px 20px 0
+}
+.endgame:hover{
+    background: rgb(55, 8, 94);
+}
+
+.topEndWedding {
+    border: 3px solid rgb(226, 204, 7);
+    background: rgb(221, 137, 28);
+    margin: 0 0 20px 20px;
+}
+.topEndWedding:hover{
+    background: rgb(160, 99, 20);
+}
+
+.dumbo {
+    border: 3px solid rgb(218, 22, 97);
+    background: rgb(129, 22, 76);
+    margin: 20px 20px 0 0;
+}
+.dumbo:hover{
+    background: rgb(88, 15, 52);
+}
+.theHappyPrince {
+    border: 3px solid rgb(59, 159, 253);
+    background: rgb(13, 83, 189);
+    margin: 20px 0 0 20px;
+}  
+.theHappyPrince:hover{
+    background: rgb(11, 58, 129);
+}
     
 
 .links{
@@ -292,7 +298,8 @@ span.avengersTime:hover{
 }
 
 #endgameShowcase{
-    background: rgb(162, 9, 209);
+    display: none;
+    background: rgb(131, 15, 167);
     overflow: auto;
     margin-left: 10px;
     margin-right: 10px;
@@ -351,15 +358,9 @@ span.avengersHeading{
     display: inline-grid;
     grid-template-columns: 30vw 66.5vw;
     background: black;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 0px;
-    margin-bottom: 20px;
-    margin-top: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 0 8px 10px 8px;
     font-size: 20px;
-    border-radius:25px;
+    border-radius:0 0 25px 25px;
 }
 
 #bookingTitle{
@@ -391,9 +392,36 @@ span.avengersHeading{
     border: solid white 1px;
 }
 
+@media only screen and (max-width: 1000px){ 
+    .nowShowing{
+         display: block;
+     }
+     .endgame{
+         margin:0;
+         min-height: 37vw;
+         height: auto;
+     }
+     .topEndWedding{
+         margin-left: 0;
+         min-height: 37vw;
+         height: auto;
+     }
+     .dumbo{
+         margin-right:0;
+         min-height: 37vw;
+         height:auto;
+     }
+     .theHappyPrince{
+         margin-left: 0;
+         min-height: 37vw;
+         height: auto;
+     }
+ }
+
 footer{
     text-align: center;
     background: rgb(15, 3, 19);
     border-radius: 100px 100px 0px 0px;
     border: solid rgb(23, 3, 36) 2px;
+    margin-top: 40px;
 }
