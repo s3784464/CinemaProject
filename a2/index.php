@@ -25,8 +25,8 @@
     </header>
 
     <main>
-      <article id='About-Us'>
-        <div id='aboutUsInfo'>
+      <article id='About-Us' onscroll="highlightNavChoice('navAboutUs')">
+        <div id='aboutUsInfo' onscroll="highlightNavChoice('navAboutUs')">
           <h2>About Us</h2>
           <p>Lunardo Cinema has reopened after receiving extensive improvements and multiple renovations including:<p>
           <ul>
@@ -54,8 +54,8 @@
 
       </article>
 
-      <article id ='Prices'>
-        <div>
+      <article id ='Prices' onscroll="highlightNavChoice('navPrices')">
+        <div onscroll="highlightNavChoice('navAboutUs')">
           <h2>Prices</h2>
           <table>
               <tr>
@@ -104,7 +104,7 @@
         </div>
       </article>
 
-    <article id ='Now-Showing'>
+    <article id ='Now-Showing' onscroll="highlightNavChoice('navNowShowing')">
       <div id=nowShowingContainer>
         <h2>Now Showing</h2>
         <div class="showcases">
@@ -184,104 +184,141 @@
 
         <article id=bookingForm>
         <!--Create a 'booking form' option-->
-          <p>WIP: <i>Booking Form</i></p>
-          <h3>Movie Title - Day - Time</h3>
-          <div id=standard>
+          <h3 id="bookingTitle">Movie Title - Day - Time</h3>
+          <div id="formLHS">
             <form>
-            <h5>Standard</h5>
-              Adults
-              <select name="adult">
-                <option value= ''> </option>
-                <option value= 1>1</option>
-                <option value= 2>2</option>
-                <option value= 3>3</option>
-                <option value= 4>4</option>
-                <option value= 5>5</option>
-                <option value= 6>6</option>
-                <option value= 7>7</option>
-                <option value= 8>8</option>
-                <option value= 9>9</option>
-                <option value= 10>10</option>
-              </select>
-              <br>Concession
-              <select name="concession">
-                <option value= ''> </option>
-                <option value= 1>1</option>
-                <option value= 2>2</option>
-                <option value= 3>3</option>
-                <option value= 4>4</option>
-                <option value= 5>5</option>
-                <option value= 6>6</option>
-                <option value= 7>7</option>
-                <option value= 8>8</option>
-                <option value= 9>9</option>
-                <option value= 10>10</option>
-              </select>
-              <br>Children
-              <select name="children">
-                <option value= ''> </option>
-                <option value= 1>1</option>
-                <option value= 2>2</option>
-                <option value= 3>3</option>
-                <option value= 4>4</option>
-                <option value= 5>5</option>
-                <option value= 6>6</option>
-                <option value= 7>7</option>
-                <option value= 8>8</option>
-                <option value= 9>9</option>
-                <option value= 10>10</option>
-              </select>
-          </form>
+            <div id=standard>
+              <h5>Standard</h5>
+                Adults<select name="adult">
+                  <option value= ''> </option>
+                  <option value= 1>1</option>
+                  <option value= 2>2</option>
+                  <option value= 3>3</option>
+                  <option value= 4>4</option>
+                  <option value= 5>5</option>
+                  <option value= 6>6</option>
+                  <option value= 7>7</option>
+                  <option value= 8>8</option>
+                  <option value= 9>9</option>
+                  <option value= 10>10</option>
+                </select>
+                <br>Concession<select name="concession">
+                  <option value= ''> </option>
+                  <option value= 1>1</option>
+                  <option value= 2>2</option>
+                  <option value= 3>3</option>
+                  <option value= 4>4</option>
+                  <option value= 5>5</option>
+                  <option value= 6>6</option>
+                  <option value= 7>7</option>
+                  <option value= 8>8</option>
+                  <option value= 9>9</option>
+                  <option value= 10>10</option>
+                </select>
+                <br>Children<select name="children">
+                  <option value= ''> </option>
+                  <option value= 1>1</option>
+                  <option value= 2>2</option>
+                  <option value= 3>3</option>
+                  <option value= 4>4</option>
+                  <option value= 5>5</option>
+                  <option value= 6>6</option>
+                  <option value= 7>7</option>
+                  <option value= 8>8</option>
+                  <option value= 9>9</option>
+                  <option value= 10>10</option>
+                </select>
+            </div>
+            </form>
+
+            <div id=concession>
+              <form>
+              <h5>Concession</h5>
+                Adults
+                <select name="adult">
+                  <option value= ''> </option>
+                  <option value= 1>1</option>
+                  <option value= 2>2</option>
+                  <option value= 3>3</option>
+                  <option value= 4>4</option>
+                  <option value= 5>5</option>
+                  <option value= 6>6</option>
+                  <option value= 7>7</option>
+                  <option value= 8>8</option>
+                  <option value= 9>9</option>
+                  <option value= 10>10</option>
+                </select>
+                <br>Concession
+                <select name="concession">
+                  <option value= ''> </option>
+                  <option value= 1>1</option>
+                  <option value= 2>2</option>
+                  <option value= 3>3</option>
+                  <option value= 4>4</option>
+                  <option value= 5>5</option>
+                  <option value= 6>6</option>
+                  <option value= 7>7</option>
+                  <option value= 8>8</option>
+                  <option value= 9>9</option>
+                  <option value= 10>10</option>
+                </select>
+                <br>Children
+                <select name="children">
+                  <option value= ''> </option>
+                  <option value= 1>1</option>
+                  <option value= 2>2</option>
+                  <option value= 3>3</option>
+                  <option value= 4>4</option>
+                  <option value= 5>5</option>
+                  <option value= 6>6</option>
+                  <option value= 7>7</option>
+                  <option value= 8>8</option>
+                  <option value= 9>9</option>
+                  <option value= 10>10</option>
+                </select>
+              </form>
+            </div>
+            <br>
+            <div id="formTotal" onclick="calculateTotal()">Total $</div>
           </div>
 
-          <div id=concession>
-            <form>
-            <h5>Concession</h5>
-              Adults
-              <select name="adult">
-                <option value= ''> </option>
-                <option value= 1>1</option>
-                <option value= 2>2</option>
-                <option value= 3>3</option>
-                <option value= 4>4</option>
-                <option value= 5>5</option>
-                <option value= 6>6</option>
-                <option value= 7>7</option>
-                <option value= 8>8</option>
-                <option value= 9>9</option>
-                <option value= 10>10</option>
+          <div id="formRHS">
+            Name<input type="text" name="name" required><br>
+            Email<input type="text" name="email" required><br>
+            Mobile<input type="text" name="mobile" required><br>
+            Credit Card<input type="text" name="creditCard" required><br>
+            Expiry<select name="expiryMonth" required>
+                <option value = ''></option>
+                <option value = '1'>1</option>
+                <option value = '2'>2</option>
+                <option value = '3'>3</option>
+                <option value = '4'>4</option>
+                <option value = '5'>5</option>
+                <option value = '6'>6</option>
+                <option value = '7'>7</option>
+                <option value = '8'>8</option>
+                <option value = '9'>9</option>
+                <option value = '10'>10</option>
+                <option value = '11'>11</option>
+                <option value = '12'>12</option>
               </select>
-              <br>Concession
-              <select name="concession">
-                <option value= ''> </option>
-                <option value= 1>1</option>
-                <option value= 2>2</option>
-                <option value= 3>3</option>
-                <option value= 4>4</option>
-                <option value= 5>5</option>
-                <option value= 6>6</option>
-                <option value= 7>7</option>
-                <option value= 8>8</option>
-                <option value= 9>9</option>
-                <option value= 10>10</option>
+
+              <select name="expiryYear" required>
+                <option value =""></option>
+                <option value ="19">19</option>
+                <option value ="20">20</option>
+                <option value ="21">21</option>
+                <option value ="22">22</option>
+                <option value ="23">23</option>
               </select>
-              <br>Children
-              <select name="children">
-                <option value= ''> </option>
-                <option value= 1>1</option>
-                <option value= 2>2</option>
-                <option value= 3>3</option>
-                <option value= 4>4</option>
-                <option value= 5>5</option>
-                <option value= 6>6</option>
-                <option value= 7>7</option>
-                <option value= 8>8</option>
-                <option value= 9>9</option>
-                <option value= 10>10</option>
-              </select>
-          </form>
+
+            <br>
+            <input type="submit" value="Order">
+
+            
+
           </div>
-        </article>
+    </article>
 
     </main>
 
@@ -299,6 +336,8 @@
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
 
-    <script src="../a3/script.js"></script>
+    <script src="../a3/script.js">
+     
+    </script>
   </body>
 </html>

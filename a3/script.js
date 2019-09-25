@@ -1,13 +1,18 @@
+var aboutUs = document.getElementById("navAboutUs");
+var prices = document.getElementById("navPrices");
+var nowShowing = document.getElementById("navNowShowing");
+
+var aboutUsDiv = document.getElementById("About-Us");
+var pricesDiv = document.getElementById("Prices");
+var nowShowingDiv = document.getElementById("Now-Showing");
+
 function highlightNavChoice(navClick){
-    var aboutUs = document.getElementById("navAboutUs");
     aboutUs.style.color = "#E2FCEF";
     aboutUs.style.textDecorationLine = "none";
 
-    var prices = document.getElementById("navPrices");
     prices.style.color = "#E2FCEF";
     prices.style.textDecorationLine = "none";
 
-    var nowShowing = document.getElementById("navNowShowing");
     nowShowing.style.color = "#E2FCEF";
     nowShowing.style.textDecorationLine = "none";
 
@@ -16,3 +21,19 @@ function highlightNavChoice(navClick){
         name.style.color = "rgb(211, 175, 245)";
         name.style.textDecorationLine = "underline";
 }
+
+function calculateTotal(){
+    var total = document.getElementById("formTotal");
+    //WIP
+}
+ 
+window.onscroll = function(){
+    console.log(window.scrollY);
+    var articles = document.getElementsByTagName('main')
+    [0].getElementsByTagName('article');
+    console.log(articles);
+    var navlinks = document.getElementsByTagName('nav')
+    [0].getElementsByTagName('a');
+    console.log(navlinks);
+}
+
