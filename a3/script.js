@@ -6,41 +6,71 @@ var aboutUsDiv = document.getElementById("About-Us");
 var pricesDiv = document.getElementById("Prices");
 var nowShowingDiv = document.getElementById("Now-Showing");
 
-function highlightNavChoice(navClick){
-    aboutUs.style.color = "#E2FCEF";
-    aboutUs.style.textDecorationLine = "none";
+// function highlightNavChoice(navClick){
+//     aboutUs.style.color = "#E2FCEF";
+//     aboutUs.style.textDecorationLine = "none";
 
-    prices.style.color = "#E2FCEF";
-    prices.style.textDecorationLine = "none";
+//     prices.style.color = "#E2FCEF";
+//     prices.style.textDecorationLine = "none";
 
-    nowShowing.style.color = "#E2FCEF";
-    nowShowing.style.textDecorationLine = "none";
+//     nowShowing.style.color = "#E2FCEF";
+//     nowShowing.style.textDecorationLine = "none";
 
-    //changes the color of the selected nav element
-    var name = document.getElementById(navClick);
-        name.style.color = "rgb(211, 175, 245)";
-        name.style.textDecorationLine = "underline";
-}
+//     //changes the color of the selected nav element
+//     var name = document.getElementById(navClick);
+//         name.style.color = "rgb(211, 175, 245)";
+//         name.style.textDecorationLine = "underline";
+// }
 
 function calculateTotal(){
     var total = document.getElementById("formTotal");
-    //WIP
+
+    var standardAdult;
+    //standardAdult = 14.00;
+
+    var standardConc;
+    //standardConc = 12.50;
+
+    var standardChild;
+    //standardChild = 11.00;
+
+    var fcAdult;
+    //fcAdult=24.00;
+
+    var fcConc;
+    //fcConc=22.50;
+
+    var fcChild;
+    //fcChild = 21.00
+
+
 }
  
 window.onscroll = function(){
-    console.log(window.scrollY);
-    var articles = document.getElementsByTagName('main')
-    [0].getElementsByTagName('article');
+    console.clear();
+    console.log("Win Y: " +window.scrollY);
+    var articles = [aboutUsDiv, pricesDiv, nowShowingDiv];
     console.log(articles);
     var navlinks = document.getElementsByTagName('nav')
     [0].getElementsByTagName('a');
     console.log(navlinks);
+    var n= -1;
+    while (n < articles.length -1 && articles[n+1].offsetTop <= window.scrollY ) {
+        n++;
+    }
+    console.log(n);
+    for (var a=0; a<navlinks.length; a++) {
+        navlinks[a].classList.remove('active');
+    }
+    if (n >= 0) {
+         navlinks[n].classList.add('active');
+    }
+    console.log(articles[n].id+": "+articles[n].offsetTop);
 }
 
 function showSynopsis(movieClick){
     var movieChoice = document.getElementById(movieClick);
-
-    endgameSynopsis = document.getElementById('endgameShowcase');
-    movieChoice.style.display = inline-block;
-    endgameSynopsis.style.display = inline-block;
+    movieChoice.style.display = "block";
 }
+
+

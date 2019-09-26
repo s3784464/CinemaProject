@@ -18,9 +18,9 @@
         
       </div>
       <nav id="navbar">
-        <a href= '#About-Us' id="navAboutUs" onclick="highlightNavChoice('navAboutUs')">About Us</a>
-        <a href= '#Prices' id="navPrices" onclick="highlightNavChoice('navPrices')">Prices</a>
-        <a href= '#Now-Showing' id="navNowShowing" onclick="highlightNavChoice('navNowShowing')">Now Showing</a> 
+        <a href= '#About-Us' id="navAboutUs">About Us</a>
+        <a href= '#Prices' id="navPrices">Prices</a>
+        <a href= '#Now-Showing' id="navNowShowing">Now Showing</a> 
       </nav>
     </header>
 
@@ -55,7 +55,6 @@
       </article>
 
       <article id ='Prices' onscroll="highlightNavChoice('navPrices')">
-        <div onscroll="highlightNavChoice('navAboutUs')">
           <h2>Prices</h2>
           <table>
               <tr>
@@ -101,10 +100,9 @@
                 <td>24.00</td>
               </tr>
           </table>
-        </div>
       </article>
 
-    <article id ='Now-Showing' onscroll="highlightNavChoice('navNowShowing')">
+    <article id ='Now-Showing'>
       <div id=nowShowingContainer>
         <h2>Now Showing</h2>
         <div class="showcases">
@@ -184,14 +182,18 @@
         
 
         <article id=bookingForm>
+          <form>
         <!--Create a 'booking form' option-->
-          <h3 id="bookingTitle">Movie Title - Day - Time</h3>
+        <h3>  <div name="movie[id]" id="movie-id" class="bookingHeading" type="hidden">Movie Title</div> - 
+          <div name = "movie[day]" id="movie-day" class="bookingHeading">Day </div> - 
+          <div name="movie[hour]" id="movie-hour" class="bookingHeading">Time</div>
+        </h3>
+        <div id="formInfo">
           <div id="formLHS">
-            <form>
-            <div id=standard>
+            <div id="standard">
               <h5>Standard</h5>
-                Adults<select name="adult">
-                  <option value= ''> </option>
+                Adults<select name="seats[STA]">
+                  <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
                   <option value= 3>3</option>
@@ -203,8 +205,8 @@
                   <option value= 9>9</option>
                   <option value= 10>10</option>
                 </select>
-                <br>Concession<select name="concession">
-                  <option value= ''> </option>
+                <br>Concession<select name="seats[STP]">
+                  <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
                   <option value= 3>3</option>
@@ -216,8 +218,8 @@
                   <option value= 9>9</option>
                   <option value= 10>10</option>
                 </select>
-                <br>Children<select name="children">
-                  <option value= ''> </option>
+                <br>Children<select name="seats[STC]">
+                  <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
                   <option value= 3>3</option>
@@ -230,14 +232,13 @@
                   <option value= 10>10</option>
                 </select>
             </div>
-            </form>
-
-            <div id=concession>
-              <form>
-              <h5>Concession</h5>
+        
+            
+            <div id="firstClass">
+              <h5>First Class</h5>
                 Adults
-                <select name="adult">
-                  <option value= ''> </option>
+                <select name="seats[FCA]">
+                  <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
                   <option value= 3>3</option>
@@ -250,8 +251,8 @@
                   <option value= 10>10</option>
                 </select>
                 <br>Concession
-                <select name="concession">
-                  <option value= ''> </option>
+                <select name="seats[FCP]">
+                  <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
                   <option value= 3>3</option>
@@ -264,8 +265,8 @@
                   <option value= 10>10</option>
                 </select>
                 <br>Children
-                <select name="children">
-                  <option value= ''> </option>
+                <select name="seats[FCC]">
+                  <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
                   <option value= 3>3</option>
@@ -277,48 +278,26 @@
                   <option value= 9>9</option>
                   <option value= 10>10</option>
                 </select>
-              </form>
             </div>
-            <br>
             <div id="formTotal" onclick="calculateTotal()">Total $</div>
+
           </div>
 
           <div id="formRHS">
-            Name<input type="text" name="name" required><br>
-            Email<input type="text" name="email" required><br>
-            Mobile<input type="text" name="mobile" required><br>
-            Credit Card<input type="text" name="creditCard" required><br>
-            Expiry<select name="expiryMonth" required>
-                <option value = ''>MM</option>
-                <option value = '1'>1</option>
-                <option value = '2'>2</option>
-                <option value = '3'>3</option>
-                <option value = '4'>4</option>
-                <option value = '5'>5</option>
-                <option value = '6'>6</option>
-                <option value = '7'>7</option>
-                <option value = '8'>8</option>
-                <option value = '9'>9</option>
-                <option value = '10'>10</option>
-                <option value = '11'>11</option>
-                <option value = '12'>12</option>
-              </select>
-
-              <select name="expiryYear" required>
-                <option value ="">YYYY</option>
-                <option value ="19">2019</option>
-                <option value ="20">2020</option>
-                <option value ="21">2021</option>
-                <option value ="22">2022</option>
-                <option value ="23">2023</option>
-              </select>
-
+            Name <input type="text" name="cust[name]" id='cust-name' required><br>
+            Email <input type="email" name="cust[email]" id='cust-email' required><br>
+            Mobile <input type="tel" name="cust[mobile]" id='cust-mobile' required><br>
+            Credit Card <input type="text" name="cust[card]" id='cust-card' required><br>
             <br>
-            <input type="submit" value="Order">
+            Expiry <input type="month" name="cust[expiry]" id='cust-expiry' required>
+            <br>
+            <input type="submit" name="order" value="Order" id='order'>
 
             
-
           </div>
+        </div>
+        <!-- end formInfo -->
+      </form>
     </article>
 
     </main>

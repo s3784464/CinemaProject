@@ -44,18 +44,20 @@ header .lunardo h1{
     font-weight: bold;
     font-size: 3vw;
 }
-#navbar a{
+nav a{
     text-decoration: none;
     color: #E2FCEF;
     font-size: 2.5vw;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
     text-align: left;
+    padding: 5px;
 }
-
-#navbar a:hover{
-    background-color: rgb(177, 11, 199);
+nav a:hover,
+nav a.active{
     color: white;
+    transition: 0.3s;
+    background-color: rgb(95, 93, 95);
 }
 
 body{
@@ -181,11 +183,11 @@ tr:nth-child(odd){
 }
 
 tr:hover {
-    background-color: rgb(119, 22, 175);
+    background-color: rgb(146, 28, 93);
 }
 
 table .topTable{
-   background-color:#35152e;
+   background-color:#160404;
    font-weight: bold;
 }
 
@@ -324,8 +326,8 @@ span.avengersTime:hover{
     float: right;
     margin: 10px;
     border: 2px solid rgb(38, 2, 63);
-    width: 50vw;
-    height: 28vw;
+    width: 40vw;
+    height: 20vw;
 }
 #endgameShowcase #makeabooking{
     font-size: 30px;
@@ -354,13 +356,48 @@ span.avengersHeading{
     float: left;
 }
 
+#formInfo{
+    display: grid;
+    background: rgb(255, 255, 255);
+    border-radius:0 0 25px 25px;
+    color: black;
+    margin: 0;
+    padding:0;
+    width: 99%;
+    
+}
+
 #bookingForm{
-    display: inline-grid;
-    grid-template-columns: 30vw 66.5vw;
-    background: black;
-    padding: 0 8px 10px 8px;
+    padding: 0;
     font-size: 20px;
     border-radius:0 0 25px 25px;
+    margin: 0 10px 0 10px;
+    width: 99%;
+    background: white;
+}
+
+#bookingForm h3{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 50px;
+}
+
+#bookingForm h5{
+    margin: 0;
+    margin-top: -25px;
+    margin-left: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+    background: white;
+    font-size: 30px;
+    text-align: center;
+    width: 140px;
+}
+
+#bookingForm .bookingHeading{
+    display: inline;
+    
 }
 
 #bookingTitle{
@@ -373,23 +410,39 @@ span.avengersHeading{
 }
 
 #formLHS{
+    margin-top: 15px;
     grid-column-start: 1;
+    width: 15vw;
+    text-align: right;
 }
 
 #formRHS{
     grid-column-start: 2;
-    margin-left: 5vw;
+    text-align: right;
+    margin-right: 56vw;
+    margin-top: 1vw;
+    width: 15vw;
 }
 
 #formRHS p{
-    margin: 10px;
+    margin: 20px;
+
 }
 
 #standard{
-    border: solid white 1px;
+    border: solid rgb(0, 0, 0) 1px;
+    padding: 10px;
+    margin: 10px;
 }
-#concession{
-    border: solid white 1px;
+#firstClass{
+    border: solid rgb(0, 0, 0) 1px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 15px;
+}
+
+#formTotal{
+    margin: 10px;
 }
 
 @media only screen and (max-width: 1000px){ 
@@ -400,6 +453,7 @@ span.avengersHeading{
          margin:0;
          min-height: 37vw;
          height: auto;
+         margin-bottom: 20px;
      }
      .topEndWedding{
          margin-left: 0;
