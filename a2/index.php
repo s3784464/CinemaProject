@@ -108,7 +108,7 @@
         <div class="showcases">
           <div class='nowShowing'>
 
-            <div class='endgame' onclick = "showSynopsis('endgameShowcase')">
+            <div class='endgame' onclick = "changeSynopsis(ENDGAME)">
                 <img src="../../media/endgame.jpg" alt="Avengers: Endgame" width="600" height="400">
               <div class="desc"><h4>Avengers: Endgame</h4>
                 <h4>PG</h4>
@@ -120,7 +120,7 @@
               </div>
             </div>
           
-            <div class='topEndWedding' onclick = "showSynopsis('topEndWedding')">
+            <div class='topEndWedding' onclick = "changeSynopsis(TOPENDWEDDING)">
                 <img src="../../media/topendwedding.jpg" alt="Top End Wedding" width="600" height="400">
               <div class="desc"><h4>Top End Wedding</h4>
               <h4>M</h4>
@@ -131,7 +131,7 @@
               </div>
             </div>
 
-            <div class='dumbo' onclick = "showSynopsis('dumbo')">
+            <div class='dumbo' onclick = "changeSynopsis(DUMBO)">
                 <img src="../../media/dumbo.jpg" alt="Dumbo" width="600" height="400">
               <div class="desc"><h4>Dumbo</h4>
                 <h4>PG</h4>
@@ -145,7 +145,7 @@
               </div>
             </div>
 
-            <div class='theHappyPrince' onclick = "showSynopsis('theHappyPrince')">
+            <div class='theHappyPrince' onclick = "changeSynopsis(THEHAPPYPRINCE)">
                 <img src="../../media/thehappyprince.jpg" alt="The Happy Prince" width="600" height="400">
               <div class="desc"><h4>The Happy Prince</h4>
               <h4>R 18+</h4>
@@ -159,6 +159,25 @@
           </div>
       </div>
     </article>
+
+    <div id="synopsisArea">
+      <h2 id="movieHeading">
+        <div id="synopsisTitle" class="movieHeading">Title</div>
+        <div id="movieClassification" class="movieHeading">Classification</div>
+        <div id="balancingText" class="movieHeading">Title</div>
+      </h2>
+      <iframe id="synopsisTrailer" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p id="movieSynopsis">Synopsis here</p>
+
+      <div id="synopsisBooking">
+        <h6 id="makeABooking">Make a Booking:</h6>
+        <div id="sessionTimes"></div>
+        <!-- <div id= "timeButton" name= "timeButton" class= 'sessionTime' onclick = updateForm()>day - time</div> -->
+      </div> <!-- end synopsisBooking -->
+
+    </div> <!-- end synopsisArea -->
+
+
 
         <div id='endgameShowcase'>
           <div id='endgameHeading'>
@@ -179,20 +198,19 @@
             <span class='avengersTime'>Sunday - 6pm</span>
           </div>
 
-        
-
         <article id=bookingForm>
-          <form>
+          <form id= "ticketForm">
         <!--Create a 'booking form' option-->
-        <h3>  <div name="movie[id]" id="movie-id" class="bookingHeading" type="hidden">Movie Title</div> - 
+        <h2>  
+          <div name="movie[id]" id="movie-id" class="bookingHeading" type="hidden">Movie Title</div> - 
           <div name = "movie[day]" id="movie-day" class="bookingHeading">Day </div> - 
           <div name="movie[hour]" id="movie-hour" class="bookingHeading">Time</div>
-        </h3>
+        </h2>
         <div id="formInfo">
           <div id="formLHS">
             <div id="standard">
               <h5>Standard</h5>
-                Adults<select name="seats[STA]">
+                Adults<select name="seats[STA]" id="seats-STA" onchange= "calculateTotal()">
                   <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
@@ -205,7 +223,7 @@
                   <option value= 9>9</option>
                   <option value= 10>10</option>
                 </select>
-                <br>Concession<select name="seats[STP]">
+                <br>Concession<select name="seats[STP]" id="seats-STP" onchange= "calculateTotal()">
                   <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
@@ -218,7 +236,7 @@
                   <option value= 9>9</option>
                   <option value= 10>10</option>
                 </select>
-                <br>Children<select name="seats[STC]">
+                <br>Children<select name="seats[STC]" id="seats-STC" onchange= "calculateTotal()">
                   <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
@@ -237,7 +255,7 @@
             <div id="firstClass">
               <h5>First Class</h5>
                 Adults
-                <select name="seats[FCA]">
+                <select name="seats[FCA]" id="seats-FCA" onchange= "calculateTotal()">
                   <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
@@ -251,7 +269,7 @@
                   <option value= 10>10</option>
                 </select>
                 <br>Concession
-                <select name="seats[FCP]">
+                <select name="seats[FCP]" id="seats-FCP" onchange= "calculateTotal()">
                   <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
@@ -265,7 +283,7 @@
                   <option value= 10>10</option>
                 </select>
                 <br>Children
-                <select name="seats[FCC]">
+                <select name="seats[FCC]" id="seats-FCC" onchange= "calculateTotal()">
                   <option value= ''>Please Select</option>
                   <option value= 1>1</option>
                   <option value= 2>2</option>
@@ -279,7 +297,10 @@
                   <option value= 10>10</option>
                 </select>
             </div>
-            <div id="formTotal" onclick="calculateTotal()">Total $</div>
+
+            <div id="formTotal">Total $ 
+              <div id=totalValue>0</div>
+            </div>
 
           </div>
 
