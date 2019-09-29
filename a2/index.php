@@ -108,54 +108,63 @@
         <div class="showcases">
           <div class='nowShowing'>
 
-            <div class='endgame' onclick = "changeSynopsis(ENDGAME)">
+            <div id="moviePanelACT" onclick = "changeSynopsis(ENDGAME)">
+              <a href="#synopsisArea">
                 <img src="../../media/endgame.jpg" alt="Avengers: Endgame" width="600" height="400">
-              <div class="desc"><h4>Avengers: Endgame</h4>
-                <h4>PG</h4>
-                <p>Wednesday - 9pm</p>
-                <p>Thursday - 9pm</p>
-                <p>Friday - 9pm</p>
-                <p>Saturday - 6pm</p>
-                <p>Sunday - 6pm</p>
-              </div>
+                <div class="desc"><h4>Avengers: Endgame</h4>
+                  <h4>PG</h4>
+                  <p>Wednesday - 9pm</p>
+                  <p>Thursday - 9pm</p>
+                  <p>Friday - 9pm</p>
+                  <p>Saturday - 6pm</p>
+                  <p>Sunday - 6pm</p>
+                </div>
+              </a>
             </div>
           
-            <div class='topEndWedding' onclick = "changeSynopsis(TOPENDWEDDING)">
+            <div id="moviePanelRMC" onclick = "changeSynopsis(TOPENDWEDDING)">
+              <a href="#synopsisArea">
                 <img src="../../media/topendwedding.jpg" alt="Top End Wedding" width="600" height="400">
-              <div class="desc"><h4>Top End Wedding</h4>
-              <h4>M</h4>
-                <p>Monday - 6pm</p>
-                <p>Tuesday - 6pm</p>
-                <p>Saturday - 12pm</p>
-                <p>Sunday - 12pm</p>
-              </div>
+                <div class="desc"><h4>Top End Wedding</h4>
+                <h4>M</h4>
+                  <p>Monday - 6pm</p>
+                  <p>Tuesday - 6pm</p>
+                  <p>Saturday - 12pm</p>
+                  <p>Sunday - 12pm</p>
+                </div>
+              </a>
             </div>
 
-            <div class='dumbo' onclick = "changeSynopsis(DUMBO)">
+            <div id="moviePanelANM" onclick = "changeSynopsis(DUMBO)">
+              <a href="#synopsisArea">
                 <img src="../../media/dumbo.jpg" alt="Dumbo" width="600" height="400">
-              <div class="desc"><h4>Dumbo</h4>
-                <h4>PG</h4>
-                <p>Monday - 12pm</p>
-                <p>Tuesday - 12pm</p>
-                <p>Wednesday - 6pm</p>
-                <p>Thursday - 6pm</p>
-                <p>Friday - 6pm</p>
-                <p>Saturday - 12pm</p>
-                <p>Sunday - 12pm</p>
-              </div>
+                <div class="desc"><h4>Dumbo</h4>
+                  <h4>PG</h4>
+                  <p>Monday - 12pm</p>
+                  <p>Tuesday - 12pm</p>
+                  <p>Wednesday - 6pm</p>
+                  <p>Thursday - 6pm</p>
+                  <p>Friday - 6pm</p>
+                  <p>Saturday - 12pm</p>
+                  <p>Sunday - 12pm</p>
+                </div>
+              </a>
+            </div>
+          
+            <div id="moviePanelAHF" onclick = "changeSynopsis(THEHAPPYPRINCE)">
+              <a href="#synopsisArea">
+                <img src="../../media/thehappyprince.jpg" alt="The Happy Prince" width="600" height="400">
+                <div class="desc"><h4>The Happy Prince</h4>
+                  <h4>R 18+</h4>
+                  <p>Wednesday - 12pm</p>
+                  <p>Thursday - 12pm</p>
+                  <p>Friday - 12pm</p>
+                  <p>Saturday - 9pm</p>
+                  <p>Sunday - 9pm</p>
+                </div>
+              </a>
             </div>
 
-            <div class='theHappyPrince' onclick = "changeSynopsis(THEHAPPYPRINCE)">
-                <img src="../../media/thehappyprince.jpg" alt="The Happy Prince" width="600" height="400">
-              <div class="desc"><h4>The Happy Prince</h4>
-              <h4>R 18+</h4>
-                <p>Wednesday - 12pm</p>
-                <p>Thursday - 12pm</p>
-                <p>Friday - 12pm</p>
-                <p>Saturday - 9pm</p>
-                <p>Sunday - 9pm</p>
-              </div>
-            </div>
           </div>
       </div>
     </article>
@@ -172,156 +181,131 @@
       <div id="synopsisBooking">
         <h6 id="makeABooking">Make a Booking:</h6>
         <div id="sessionTimes"></div>
-        <!-- <div id= "timeButton" name= "timeButton" class= 'sessionTime' onclick = updateForm()>day - time</div> -->
       </div> <!-- end synopsisBooking -->
-
     </div> <!-- end synopsisArea -->
 
-
-
-        <div id='endgameShowcase'>
-          <div id='endgameHeading'>
-            <h2>Avengers: Endgame</h2>
-            <span class="pg">PG</span>
-          </div>
-          <iframe width ="700" height = "400" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder=0 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>"After the devastating events of "<b>Avengers: Infinity War (2018)</b>", the universe is in ruins. With the help of remaining allies, 
-          the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. "<b>(IMDB Avengers: Endgame 2019)</b>
-          </p>
-          
-          <article id = 'makeABooking'>
-          <p id="makeabooking">Make a Booking:</p>
-            <span class='avengersTime'> Wednesday - 9pm</span>
-            <span class='avengersTime'>Thursday - 9pm</span>
-            <span class='avengersTime'>Friday - 9pm</span>
-            <span class='avengersTime'>Saturday - 6pm</span>
-            <span class='avengersTime'>Sunday - 6pm</span>
-          </div>
-
         <article id=bookingForm>
-          <form id= "ticketForm">
-        <!--Create a 'booking form' option-->
-        <h2>  
-          <div name="movie[id]" id="movie-id" class="bookingHeading" type="hidden">Movie Title</div> - 
-          <div name = "movie[day]" id="movie-day" class="bookingHeading">Day </div> - 
-          <div name="movie[hour]" id="movie-hour" class="bookingHeading">Time</div>
-        </h2>
-        <div id="formInfo">
-          <div id="formLHS">
-            <div id="standard">
-              <h5>Standard</h5>
-                Adults<select name="seats[STA]" id="seats-STA" onchange= "calculateTotal()">
-                  <option value= ''>Please Select</option>
-                  <option value= 1>1</option>
-                  <option value= 2>2</option>
-                  <option value= 3>3</option>
-                  <option value= 4>4</option>
-                  <option value= 5>5</option>
-                  <option value= 6>6</option>
-                  <option value= 7>7</option>
-                  <option value= 8>8</option>
-                  <option value= 9>9</option>
-                  <option value= 10>10</option>
-                </select>
-                <br>Concession<select name="seats[STP]" id="seats-STP" onchange= "calculateTotal()">
-                  <option value= ''>Please Select</option>
-                  <option value= 1>1</option>
-                  <option value= 2>2</option>
-                  <option value= 3>3</option>
-                  <option value= 4>4</option>
-                  <option value= 5>5</option>
-                  <option value= 6>6</option>
-                  <option value= 7>7</option>
-                  <option value= 8>8</option>
-                  <option value= 9>9</option>
-                  <option value= 10>10</option>
-                </select>
-                <br>Children<select name="seats[STC]" id="seats-STC" onchange= "calculateTotal()">
-                  <option value= ''>Please Select</option>
-                  <option value= 1>1</option>
-                  <option value= 2>2</option>
-                  <option value= 3>3</option>
-                  <option value= 4>4</option>
-                  <option value= 5>5</option>
-                  <option value= 6>6</option>
-                  <option value= 7>7</option>
-                  <option value= 8>8</option>
-                  <option value= 9>9</option>
-                  <option value= 10>10</option>
-                </select>
-            </div>
-        
+          <form id= "ticketForm" action ="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+            <h2>  
+              <div id="movieHeading-id" class="bookingHeading">Movie Title</div> - 
+              <div id="movieHeading-day" class="bookingHeading">Day</div> - 
+              <div id="movieHeading-hour" class="bookingHeading">Time</div>
+
+              <input type = "hidden"  name="movie[id]" id="movie-id" value =""></div> 
+              <input type = "hidden"  name="movie[day]" id="movie-day" value=""></div>
+              <input type = "hidden"  name="movie[hour]" id="movie-hour" value =""></div>
+            </h2>
+            <div id="formInfo">
+              <div id="formLHS">
+                <div id="standard">
+                  <h5>Standard</h5>
+                    Adults<select name="seats[STA]" id="seats-STA" onchange= "calculateTotal()">
+                      <option value= ''>Please Select</option>
+                      <option value= 1>1</option>
+                      <option value= 2>2</option>
+                      <option value= 3>3</option>
+                      <option value= 4>4</option>
+                      <option value= 5>5</option>
+                      <option value= 6>6</option>
+                      <option value= 7>7</option>
+                      <option value= 8>8</option>
+                      <option value= 9>9</option>
+                      <option value= 10>10</option>
+                    </select>
+                    <br>Concession<select name="seats[STP]" id="seats-STP" onchange= "calculateTotal()">
+                      <option value= ''>Please Select</option>
+                      <option value= 1>1</option>
+                      <option value= 2>2</option>
+                      <option value= 3>3</option>
+                      <option value= 4>4</option>
+                      <option value= 5>5</option>
+                      <option value= 6>6</option>
+                      <option value= 7>7</option>
+                      <option value= 8>8</option>
+                      <option value= 9>9</option>
+                      <option value= 10>10</option>
+                    </select>
+                    <br>Children<select name="seats[STC]" id="seats-STC" onchange= "calculateTotal()">
+                      <option value= ''>Please Select</option>
+                      <option value= 1>1</option>
+                      <option value= 2>2</option>
+                      <option value= 3>3</option>
+                      <option value= 4>4</option>
+                      <option value= 5>5</option>
+                      <option value= 6>6</option>
+                      <option value= 7>7</option>
+                      <option value= 8>8</option>
+                      <option value= 9>9</option>
+                      <option value= 10>10</option>
+                    </select>
+                </div>
             
-            <div id="firstClass">
-              <h5>First Class</h5>
-                Adults
-                <select name="seats[FCA]" id="seats-FCA" onchange= "calculateTotal()">
-                  <option value= ''>Please Select</option>
-                  <option value= 1>1</option>
-                  <option value= 2>2</option>
-                  <option value= 3>3</option>
-                  <option value= 4>4</option>
-                  <option value= 5>5</option>
-                  <option value= 6>6</option>
-                  <option value= 7>7</option>
-                  <option value= 8>8</option>
-                  <option value= 9>9</option>
-                  <option value= 10>10</option>
-                </select>
-                <br>Concession
-                <select name="seats[FCP]" id="seats-FCP" onchange= "calculateTotal()">
-                  <option value= ''>Please Select</option>
-                  <option value= 1>1</option>
-                  <option value= 2>2</option>
-                  <option value= 3>3</option>
-                  <option value= 4>4</option>
-                  <option value= 5>5</option>
-                  <option value= 6>6</option>
-                  <option value= 7>7</option>
-                  <option value= 8>8</option>
-                  <option value= 9>9</option>
-                  <option value= 10>10</option>
-                </select>
-                <br>Children
-                <select name="seats[FCC]" id="seats-FCC" onchange= "calculateTotal()">
-                  <option value= ''>Please Select</option>
-                  <option value= 1>1</option>
-                  <option value= 2>2</option>
-                  <option value= 3>3</option>
-                  <option value= 4>4</option>
-                  <option value= 5>5</option>
-                  <option value= 6>6</option>
-                  <option value= 7>7</option>
-                  <option value= 8>8</option>
-                  <option value= 9>9</option>
-                  <option value= 10>10</option>
-                </select>
-            </div>
+                <div id="firstClass">
+                  <h5>First Class</h5>
+                    Adults
+                    <select name="seats[FCA]" id="seats-FCA" onchange= "calculateTotal()">
+                      <option value= ''>Please Select</option>
+                      <option value= 1>1</option>
+                      <option value= 2>2</option>
+                      <option value= 3>3</option>
+                      <option value= 4>4</option>
+                      <option value= 5>5</option>
+                      <option value= 6>6</option>
+                      <option value= 7>7</option>
+                      <option value= 8>8</option>
+                      <option value= 9>9</option>
+                      <option value= 10>10</option>
+                    </select>
+                    <br>Concession
+                    <select name="seats[FCP]" id="seats-FCP" onchange= "calculateTotal()">
+                      <option value= ''>Please Select</option>
+                      <option value= 1>1</option>
+                      <option value= 2>2</option>
+                      <option value= 3>3</option>
+                      <option value= 4>4</option>
+                      <option value= 5>5</option>
+                      <option value= 6>6</option>
+                      <option value= 7>7</option>
+                      <option value= 8>8</option>
+                      <option value= 9>9</option>
+                      <option value= 10>10</option>
+                    </select>
+                    <br>Children
+                    <select name="seats[FCC]" id="seats-FCC" onchange= "calculateTotal()">
+                      <option value= ''>Please Select</option>
+                      <option value= 1>1</option>
+                      <option value= 2>2</option>
+                      <option value= 3>3</option>
+                      <option value= 4>4</option>
+                      <option value= 5>5</option>
+                      <option value= 6>6</option>
+                      <option value= 7>7</option>
+                      <option value= 8>8</option>
+                      <option value= 9>9</option>
+                      <option value= 10>10</option>
+                    </select>
+                </div>
 
-            <div id="formTotal">Total $ 
-              <div id=totalValue>0</div>
-            </div>
+                <div id="formTotal">Total $ 
+                  <div id=totalValue>0</div>
+                </div>
+              </div> <!-- end formLHS -->
 
-          </div>
-
-          <div id="formRHS">
-            Name <input type="text" name="cust[name]" id='cust-name' required><br>
-            Email <input type="email" name="cust[email]" id='cust-email' required><br>
-            Mobile <input type="tel" name="cust[mobile]" id='cust-mobile' required><br>
-            Credit Card <input type="text" name="cust[card]" id='cust-card' required><br>
-            <br>
-            Expiry <input type="month" name="cust[expiry]" id='cust-expiry' required>
-            <br>
-            <input type="submit" name="order" value="Order" id='order'>
-
-            
-          </div>
-        </div>
-        <!-- end formInfo -->
-      </form>
+              <div id="formRHS">
+                Name <input type="text" name="cust[name]" id='cust-name' required pattern="[a-zA-Z \-.']{1,100}"><br>
+                Email <input type="email" name="cust[email]" id='cust-email' required><br>
+                Mobile <input type="tel" name="cust[mobile]" id='cust-mobile' required pattern="(\(04\)|04|\+614)( ?\d){8}" ><br>
+                Credit Card <input type="text" name="cust[card]" id='cust-card' required pattern="((4\d{3})|(5[1-5]\d{2})|(6011)|(34\d{1})|(37\d{1}))-?\s?\d{4}-?\s?\d{4}-?\s?\d{4}|3[4,7][\d\s-]{15}"><br>
+                <br>
+                Expiry <input type="month" name="cust[expiry]" id='cust-expiry' required>
+                <br>
+                <input type="submit" name="order" value="Order" id='order'>
+              </div> <!-- end formRHS -->
+            </div><!-- end formInfo -->
+          </form>
     </article>
-
     </main>
+
 
     <footer>
       <div>&copy;
@@ -337,8 +321,7 @@
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
 
-    <script src="../a3/script.js">
-     
-    </script>
+    <script src="../a3/script.js"></script>
+
   </body>
 </html>

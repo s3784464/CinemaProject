@@ -56,7 +56,7 @@ nav a{
 nav a:hover,
 nav a.active{
     color: white;
-    transition: 0.3s;
+    transition: 0.35s;
     background-color: rgb(95, 93, 95);
 }
 
@@ -67,12 +67,12 @@ body{
     background-attachment: fixed;
     padding: 0;
     margin: 0;
-    color: #E2FCEF;
+    color: white;
 }
 
 h2{
-    color: #E2FCEF;
-    background:#170F11;
+    color: white;
+    background:rgb(14, 9, 10);
     margin: 0px 0px 0px 0px;
     font-size: 65px;
     text-align: center;
@@ -95,7 +95,7 @@ h3{
 }
 
 #aboutUsInfo{
-    background-image: linear-gradient(to top, rgb(77, 3, 3) , rgb(202, 5, 5));
+    background-image: linear-gradient(to top, rgb(12, 1, 1) , rgb(88, 5, 5));
     border-radius:25px;
 }
 
@@ -108,7 +108,7 @@ h3{
 #About-Us a{
     text-decoration: underline;
     font-weight: bold;
-    color: rgb(237, 171, 247);
+    color: rgb(255, 183, 183);
     
 }
 #About-Us p{
@@ -133,9 +133,9 @@ h3{
 }
 
 span.imageContainer{
-    background: rgb(19, 18, 18);
+    background: rgb(17, 16, 16);
     margin-left: 17vw;
-    border: solid rgb(175, 173, 173) 3px;
+    border: solid rgb(109, 109, 109) 3px;
     width: 20vw;
     height: 15vw;
     text-align: center;
@@ -183,11 +183,11 @@ tr:nth-child(odd){
 }
 
 tr:hover {
-    background-color: rgb(146, 28, 93);
+    background-color: rgb(109, 28, 146);
 }
 
 table .topTable{
-   background-color:#160404;
+   background-color:#29052c;
    font-weight: bold;
 }
 
@@ -222,6 +222,17 @@ table .topTable{
     border: 2px solid rgb(0, 0, 0);
 }
 
+#Now-Showing a{
+    text-decoration: none;
+    color: white;
+    margin:0;
+    padding: 0;
+}
+
+div.desc{
+    min-height: 35vw;
+}
+
 .nowShowing{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -231,6 +242,7 @@ table .topTable{
     border: 0;
     width: 100%;
 }
+
 
 .nowShowing h4{
     font-size: 3vw;
@@ -244,38 +256,42 @@ li{
     list-style-type: circle;
 }
 
-.endgame {
+#moviePanelACT{
     border: 3px solid rgb(177, 11, 199);
     background: rgb(83, 9, 143);
-    margin: 0 20px 20px 0
+    margin: 0 20px 20px 0;
+    min-height: 35vw;
 }
-.endgame:hover{
+#moviePanelACT:hover{
     background: rgb(55, 8, 94);
 }
 
-.topEndWedding {
+#moviePanelRMC {
     border: 3px solid rgb(226, 204, 7);
     background: rgb(221, 137, 28);
     margin: 0 0 20px 20px;
+    min-height: 35vw;
 }
-.topEndWedding:hover{
+#moviePanelRMC:hover{
     background: rgb(160, 99, 20);
 }
 
-.dumbo {
+#moviePanelANM {
     border: 3px solid rgb(218, 22, 97);
     background: rgb(129, 22, 76);
     margin: 20px 20px 0 0;
+    min-height: 35vw;
 }
-.dumbo:hover{
+#moviePanelANM:hover{
     background: rgb(88, 15, 52);
 }
-.theHappyPrince {
+#moviePanelAHF {
     border: 3px solid rgb(59, 159, 253);
     background: rgb(13, 83, 189);
     margin: 20px 0 0 20px;
+    min-height: 35vw;
 }  
-.theHappyPrince:hover{
+#moviePanelAHF:hover{
     background: rgb(11, 58, 129);
 }
 
@@ -284,7 +300,7 @@ li{
     display: none;
     background: rgb(82, 81, 81);
     border-radius:25px 25px 25px 25px;
-    min-height: 25vw;
+    min-height: 26vw;
     margin: 0 10px 0 10px;
     height: auto;
 }
@@ -340,11 +356,12 @@ li{
 #movieClassification{
     margin: 0;
     text-align: center;
+    font-family: sans-serif;
 }
 #balancingText{
     float: right;
     margin-right: 15px;
-    visiblity: hidden;
+    visibility: hidden;
 }
 
     
@@ -355,69 +372,6 @@ li{
     font-weight: bold;
 }
 
-span.avengersTime{
-    display: inline-block;
-    width: 190px;
-    height: 40px;
-    margin: 5px;
-    border: 5px double rgb(30, 1, 36);    
-    background-color: rgb(123, 7, 201); 
-    text-align: center;
-}
-span.avengersTime:hover{
-    background: rgb(48, 3, 78);
-}
-
-#endgameShowcase{
-    display: none;
-    background: rgb(131, 15, 167);
-    overflow: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 25px;
-    border-radius:25px;
-}
-#endgameShowcase h2 { 
-    display: inline;
-    text-align: left; }
-
-
-#endgameHeading{
-    width: auto;
-    background: #170F11;
-    grid-template-columns: 40% 60%;
-
-}
-#endgameShowcase iframe{
-    display:block;
-    margin-right: auto;
-    clear: top;
-    float: right;
-    margin: 10px;
-    border: 2px solid rgb(38, 2, 63);
-    width: 40vw;
-    height: 20vw;
-}
-#endgameShowcase #makeabooking{
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 0px;
-}
-
-#endgameShowcase p{
-    margin-left: 10px;
-}
-
-span.pg{
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    font-size: 50px;
-    margin-top: 0.5%;
-    font-weight: bold;
-    font-family: sans-serif;
-    margin-left: 100px;
-}
 
 span.avengersHeading{
     grid-column-start: 0;
@@ -439,7 +393,7 @@ span.avengersHeading{
     font-size: 20px;
     border-radius:0 0 25px 25px;
     margin: 0 10px 0 10px;
-    width: 99%;
+    width: auto;
     background: rgb(92, 76, 104);
     display: none;
     padding-bottom: 12px;
@@ -483,17 +437,19 @@ span.avengersHeading{
 
 #formLHS{
     margin-top: 15px;
+    margin-right: 8vw;
     grid-column-start: 1;
-    width: 15vw;
+    width: 25vw;
     text-align: right;
 }
 
 #formRHS{
     grid-column-start: 2;
     text-align: right;
-    margin-right: 56vw;
-    margin-top: 2.2vw;
-    width: 15vw;
+    margin-top: 2.3vw;
+    margin-right: 30vw;
+    width: 25vw;
+    padding-right: 10vw;
 }
 
 #formRHS p{
@@ -510,7 +466,7 @@ span.avengersHeading{
     border: solid rgb(0, 0, 0) 1px;
     padding: 10px;
     margin: 10px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 #formTotal{
@@ -523,6 +479,7 @@ span.avengersHeading{
     width: 100px;
     height: 20px;
     margin-top: 10px;
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 1000px){ 

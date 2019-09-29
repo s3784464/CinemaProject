@@ -24,7 +24,7 @@ var DUMBO = {
 
 var THEHAPPYPRINCE = {
     title:"The Happy Prince",
-    classification:"R18",
+    classification:"R18+",
     synopsis: "The untold story of the last days in the tragic times of Oscar Wilde, a person who observes his own failure with ironic distance and regards the difficulties that beset his life with detachment and humor. <b><i>(IMDB The Happy Prince 2018)</i></b>",
     trailer: "https://www.youtube.com/embed/4HmN9r1Fcr8",
     bookingTimes: ["Wednesday - 12pm", "Thursday - 12pm", "Friday - 12pm", "Saturday - 9pm", "Sunday - 9pm"]
@@ -75,22 +75,83 @@ function changeSynopsis(movie){
 
 }
 
+
 function updateForm(sessionId){
-    
+    var day = document.getElementById("movie-day");     //booking form day value
+    var hour = document.getElementById("movie-hour");   //booking form movie-hour value
+    var id = document.getElementById("movie-id");       //booking form movie-id value
+
     var sessionChoice = document.getElementById(sessionId);
     choiceContent = sessionChoice.textContent;
     //console.log("the choice is" + choiceContent);
-    var dayAndTime = choiceContent.split(" - ");
-    //console.log(dayAndTime[0]);
-    //console.log(dayAndTime[1]);
+    var dayAndHour = choiceContent.split(" - ");
+    //console.log(dayAndHour[0]);   //logs literal movie-day data
+    //console.log(dayAndHour[1]);   //logs literal movie-hour data
 
-    var title = document.getElementById("movie-id");
-    var day = document.getElementById("movie-day");
-    var time = document.getElementById("movie-hour");
-    day.innerHTML = dayAndTime[0];
-    time.innerHTML = dayAndTime[1];
-    var synopsisTitle = document.getElementById("synopsisTitle");
-    title.innerHTML = synopsisTitle.textContent;
+    switch(dayAndHour[0]){ //assigns abbreviated movie-day data to booking form
+        case "Monday":
+            day.value= "MON";
+            break;
+        case "Tuesday":
+            day.value= "TUE";
+            break;
+        case "Wednesday":
+            day.value= "WED";
+            break;
+        case "Thursday":
+            day.value= "THU";
+            break;
+        case "Friday":
+            day.value= "FRI";
+            break;
+        case "Saturday":
+            day.value= "SAT";
+            break;
+        case "Sunday":
+            day.value= "SUN";
+            break;
+    }
+
+    switch(dayAndHour[1]){ //assigning abbreviated movie-hour data to booking form
+        case "12pm":
+            hour.value= "T12";
+            break;
+        case "3pm":
+            hour.value= "T15";
+            break;
+        case "6pm":
+            hour.value= "T18";
+            break;
+        case "9pm":
+            hour.value= "T21";
+            break;
+    }
+    
+    var synopsisTitle = document.getElementById("synopsisTitle").textContent;
+    var headingDay = document.getElementById("movieHeading-day");
+    headingDay.innerHTML = dayAndHour[0];    //when assigning literal movie-day to booking for e.g. "Monday"
+    var headingTime = document.getElementById("movieHeading-hour");
+    headingTime.innerHTML = dayAndHour[1];   //when asigning literal movie-time to booking form e.g. "9pm"
+    var headingId = document.getElementById("movieHeading-id");
+    headingId.innerHTML = synopsisTitle;
+
+
+    
+    switch(synopsisTitle){ //assigning abbreviated movie-id data to booking form
+        case "Avengers: Endgame":
+            id.value= "ACT";
+            break;
+        case "The Happy Prince":
+            id.value= "AHF";
+            break;
+        case "Dumbo":
+            id.value= "ANM";
+            break;
+        case "Top End Wedding":
+            id.value= "RMC";
+            break;
+    }
+    
     
     var synopsisArea = document.getElementById("synopsisArea");
     synopsisArea.style.borderRadius = "25px 25px 0 0";
@@ -108,7 +169,7 @@ function calculateTotal(){
     FCA = document.getElementById("seats-FCA").value;
     FCP = document.getElementById("seats-FCP").value;
     FCC = document.getElementById("seats-FCC").value;
-    console.log(STA);
+    //console.log(STA);
 
     var day = document.getElementById("movie-day").textContent;
     var time = document.getElementById("movie-hour").textContent;
@@ -130,14 +191,12 @@ function calculateTotal(){
     }
     else{
         STAprice = 19.80;
-
         STPprice = 17.50;
         STCprice = 15.30;
         FCAprice = 30.00;
         FCPprice=27.00;
         FCCprice = 24.00
     }
-    
     totalPrice = ((+STA * STAprice) + (+STP*STPprice) + (+STC*STCprice) + (+FCA*FCAprice) + (+FCP*FCPprice) + (+FCC*FCCprice)).toFixed(2);
 
     var totalElement = document.getElementById("totalValue");
@@ -148,24 +207,24 @@ window.onscroll = function(){
     var aboutUsDiv = document.getElementById("About-Us");
     var pricesDiv = document.getElementById("Prices");
     var nowShowingDiv = document.getElementById("Now-Showing");
-    console.clear();
-    
-    console.log("Win Y: " +window.scrollY);
+
+    //console.clear();
+    //console.log("Win Y: " +window.scrollY);
     var articles = [aboutUsDiv, pricesDiv, nowShowingDiv];
-    console.log(articles);
+    //console.log(articles);
     var navlinks = document.getElementsByTagName('nav')
     [0].getElementsByTagName('a');
-    console.log(navlinks);
+    //console.log(navlinks);
     var n= -1;
-    while (n < articles.length -1 && articles[n+1].offsetTop <= window.scrollY ) {
+    while (n < articles.length -1 && articles[n+1].offsetTop <= window.scrollY+1) {
         n++;
     }
-    console.log(n);
+    //console.log(n);
     for (var a=0; a<navlinks.length; a++) {
         navlinks[a].classList.remove('active');
     }
     if (n >= 0) {
          navlinks[n].classList.add('active');
     }
-    console.log(articles[n].id+": "+articles[n].offsetTop);
+    //console.log(articles[n].id+": "+articles[n].offsetTop);
 }
