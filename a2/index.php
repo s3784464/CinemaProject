@@ -185,7 +185,7 @@
     </div> <!-- end synopsisArea -->
 
         <article id=bookingForm>
-          <form id= "ticketForm" action ="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+          <form id= "ticketForm" method= "post" action= "https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php">
             <h2>  
               <div id="movieHeading-id" class="bookingHeading">Movie Title</div> - 
               <div id="movieHeading-day" class="bookingHeading">Day</div> - 
@@ -199,7 +199,8 @@
               <div id="formLHS">
                 <div id="standard">
                   <h5>Standard</h5>
-                    Adults<select name="seats[STA]" id="seats-STA" onchange= "calculateTotal()">
+                    <label for="seats-STA">Adults</label>
+                      <select name="seats[STA]" id="seats-STA" onchange= "calculateTotal()">
                       <option value= ''>Please Select</option>
                       <option value= 1>1</option>
                       <option value= 2>2</option>
@@ -212,7 +213,9 @@
                       <option value= 9>9</option>
                       <option value= 10>10</option>
                     </select>
-                    <br>Concession<select name="seats[STP]" id="seats-STP" onchange= "calculateTotal()">
+                    <br>
+                    <label for="seats-STP">Concession</label>
+                      <select name="seats[STP]" id="seats-STP" onchange= "calculateTotal()">
                       <option value= ''>Please Select</option>
                       <option value= 1>1</option>
                       <option value= 2>2</option>
@@ -225,7 +228,9 @@
                       <option value= 9>9</option>
                       <option value= 10>10</option>
                     </select>
-                    <br>Children<select name="seats[STC]" id="seats-STC" onchange= "calculateTotal()">
+                    <br>
+                    <label for="seats-STC">Children</label>
+                      <select name="seats[STC]" id="seats-STC" onchange= "calculateTotal()">
                       <option value= ''>Please Select</option>
                       <option value= 1>1</option>
                       <option value= 2>2</option>
@@ -242,7 +247,7 @@
             
                 <div id="firstClass">
                   <h5>First Class</h5>
-                    Adults
+                  <label for="seats-FCA">Adults</label>
                     <select name="seats[FCA]" id="seats-FCA" onchange= "calculateTotal()">
                       <option value= ''>Please Select</option>
                       <option value= 1>1</option>
@@ -256,7 +261,8 @@
                       <option value= 9>9</option>
                       <option value= 10>10</option>
                     </select>
-                    <br>Concession
+                    <br>
+                    <label for="seats-FCP">Concession</label>
                     <select name="seats[FCP]" id="seats-FCP" onchange= "calculateTotal()">
                       <option value= ''>Please Select</option>
                       <option value= 1>1</option>
@@ -270,7 +276,8 @@
                       <option value= 9>9</option>
                       <option value= 10>10</option>
                     </select>
-                    <br>Children
+                    <br>
+                    <label for="seats-FCC">Children</label>
                     <select name="seats[FCC]" id="seats-FCC" onchange= "calculateTotal()">
                       <option value= ''>Please Select</option>
                       <option value= 1>1</option>
@@ -292,14 +299,14 @@
               </div> <!-- end formLHS -->
 
               <div id="formRHS">
-                Name <input type="text" name="cust[name]" id='cust-name' required pattern="[a-zA-Z \-.']{1,100}"><br>
-                Email <input type="email" name="cust[email]" id='cust-email' required><br>
-                Mobile <input type="tel" name="cust[mobile]" id='cust-mobile' required pattern="(\(04\)|04|\+614)( ?\d){8}" ><br>
-                Credit Card <input type="text" name="cust[card]" id='cust-card' required pattern="((4\d{3})|(5[1-5]\d{2})|(6011)|(34\d{1})|(37\d{1}))-?\s?\d{4}-?\s?\d{4}-?\s?\d{4}|3[4,7][\d\s-]{15}"><br>
+                <label for="cust-name">Name <input type="text" name="cust[name]" id='cust-name' required pattern="[a-zA-Z \-.']{1,100}"></label><br>
+                <label for="cust-email">Email <input type="email" name="cust[email]" id='cust-email' required></label><br>
+                <label for="cust-mobile">Mobile <input type="tel" name="cust[mobile]" id='cust-mobile' required pattern="(\(04\)|04|\+614)( ?\d){8}" ></label><br>
+                <label for="cust-card">Credit Card <input type="text" name="cust[card]" id='cust-card' required pattern="((4\d{3})|(5[1-5]\d{2})|(6011)|(34\d{1})|(37\d{1}))-?\s?\d{4}-?\s?\d{4}-?\s?\d{4}|3[4,7][\d\s-]{15}"></label><br>
                 <br>
-                Expiry <input type="month" name="cust[expiry]" id='cust-expiry' required>
+                <label for="cust-expiry">Expiry <input type="month" name="cust[expiry]" id='cust-expiry' required></label>
                 <br>
-                <input type="submit" name="order" value="Order" id='order'>
+                <input type="submit" name="order" value="Order" id='order' onclick="validateDate()">
               </div> <!-- end formRHS -->
             </div><!-- end formInfo -->
           </form>

@@ -1,7 +1,7 @@
 var ENDGAME = {
     title:"Avengers: Endgame",
     classification:"PG", 
-    synopsis:"After the devastating events of <b>Avengers: Infinity War (2018)</b>, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. <b><i>(IMDB Avengers: Endgame 2019)</i></b>",
+    synopsis:"After the devastating events of <b>Avengers: Infinity War (2018)</b>, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. <b><i>(IMDb Avengers: Endgame 2019)</i></b>",
     trailer: "https://www.youtube.com/embed/TcMBFSGVi1c",
     bookingTimes: ["Wednesday - 9pm", "Thursday - 9pm", "Friday - 9pm", "Saturday - 6pm", "Sunday - 6pm"]
 };
@@ -9,7 +9,7 @@ var ENDGAME = {
 var TOPENDWEDDING = {
     title:"Top End Wedding",
     classification:"M",
-    synopsis: "Lauren and Ned are engaged, they are in love, and they have just ten days to find Lauren's mother who has gone AWOL somewhere in the remote far north of Australia, reunite her parents and pull off their dream wedding. <b><i>(IMDB Top End Wedding 2019)</i></b>",
+    synopsis: "Lauren and Ned are engaged, they are in love, and they have just ten days to find Lauren's mother who has gone AWOL somewhere in the remote far north of Australia, reunite her parents and pull off their dream wedding. <b><i>(IMDb Top End Wedding 2019)</i></b>",
     trailer: "https://www.youtube.com/embed/uoDBvGF9pPU",
     bookingTimes: ["Monday - 6pm", "Tuesday - 6pm", "Saturday - 12pm", "Sunday - 12pm"]
 };
@@ -17,7 +17,7 @@ var TOPENDWEDDING = {
 var DUMBO = {
     title:"Dumbo",
     classification:"PG",
-    synopsis: "A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, Dumbo and his friends discover dark secrets beneath its shiny veneer. <b><i>(IMDB Dumbo 2019)</i></b>",
+    synopsis: "A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, Dumbo and his friends discover dark secrets beneath its shiny veneer. <b><i>(IMDb Dumbo 2019)</i></b>",
     trailer: "https://www.youtube.com/embed/7NiYVoqBt-8",
     bookingTimes: ["Monday - 12pm", "Tuesday - 12pm", "Wednesday - 6pm", "Thursday - 6pm", "Friday - 6pm", "Saturday - 12pm", "Sunday - 12pm"]
 };
@@ -25,7 +25,7 @@ var DUMBO = {
 var THEHAPPYPRINCE = {
     title:"The Happy Prince",
     classification:"R18+",
-    synopsis: "The untold story of the last days in the tragic times of Oscar Wilde, a person who observes his own failure with ironic distance and regards the difficulties that beset his life with detachment and humor. <b><i>(IMDB The Happy Prince 2018)</i></b>",
+    synopsis: "The untold story of the last days in the tragic times of Oscar Wilde, a person who observes his own failure with ironic distance and regards the difficulties that beset his life with detachment and humor. <b><i>(IMDb The Happy Prince 2018)</i></b>",
     trailer: "https://www.youtube.com/embed/4HmN9r1Fcr8",
     bookingTimes: ["Wednesday - 12pm", "Thursday - 12pm", "Friday - 12pm", "Saturday - 9pm", "Sunday - 9pm"]
 };
@@ -126,7 +126,7 @@ function updateForm(sessionId){
             hour.value= "T21";
             break;
     }
-    
+
     var synopsisTitle = document.getElementById("synopsisTitle").textContent;
     var headingDay = document.getElementById("movieHeading-day");
     headingDay.innerHTML = dayAndHour[0];    //when assigning literal movie-day to booking for e.g. "Monday"
@@ -227,4 +227,34 @@ window.onscroll = function(){
          navlinks[n].classList.add('active');
     }
     //console.log(articles[n].id+": "+articles[n].offsetTop);
+}
+
+function validateDate(){
+    var expiryDate = document.forms["ticketForm"]["cust[expiry]"].value;
+    var dateArr = expiryDate.split("-");
+    var expiryYear = dateArr[0];    //dateArr[0] is year
+    //console.log(expiryYear);
+    var expiryMonth = dateArr[1];   //dateArr[1] is month
+    //console.log(expiryMonth);
+
+    var date = new Date();
+    //console.log(date.getMonth());
+    var getMonth = date.getMonth();
+
+    var currentMonth = +getMonth + +1;
+    if(currentMonth<10){
+        currentMonth = "0" + currentMonth;
+    }
+    //console.log(currentMonth);
+
+    if (expiryYear < date.getFullYear() || (expiryYear == date.getFullYear() && expiryMonth <= currentMonth))
+    {
+        alert("Invalid Card Expiry Date - card is expired");
+        document.getElementById("cust-expiry").value = '';
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
