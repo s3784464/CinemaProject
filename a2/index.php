@@ -1,3 +1,5 @@
+<?php include('../a4/tools.php'); ?>
+
 <!DOCTYPE html>
 <html lang='en'>
   <head>
@@ -9,10 +11,12 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
     <script src='../wireframe.js'></script>
+
   </head>
 
   <body>
     <header>
+      
       <div class='lunardo'>
        <img src ='../../media/logo.png' alt='Logo' height=100px> <h1>Lunardo Cinema</h1> 
         
@@ -168,6 +172,10 @@
           </div>
       </div>
     </article>
+    
+    <?php 
+      getVariables();
+    ?>
 
     <div id="synopsisArea">
       <h2 id="movieHeading">
@@ -185,7 +193,7 @@
     </div> <!-- end synopsisArea -->
 
         <article id=bookingForm>
-          <form id= "ticketForm" method= "post" action= "https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php">
+          <form id= "ticketForm" method= "post" action= "">
             <h2>  
               <div id="movieHeading-id" class="bookingHeading">Movie Title</div> - 
               <div id="movieHeading-day" class="bookingHeading">Day</div> - 
@@ -310,7 +318,30 @@
               </div> <!-- end formRHS -->
             </div><!-- end formInfo -->
           </form>
+
+          
     </article>
+
+ 
+    <?php /* tool1
+    preShow($_POST); // ie echo a string
+    preShow($_SESSION);
+    $aaarg = preShow($my_bad_array, true); // ie return as a string
+    echo "Why is \n $aaarg \n not working?"; 
+    */
+    ?> 
+
+    <?php  /* tool2
+    printMyCode(); 
+    */
+    ?> 
+
+    <?php /* tool3
+    $pricesArrayPHP = array ( ... );
+    php2js($pricesArrayPHP, 'pricesArrayJS'); // ie echos javascript equivalent code
+    */ 
+    ?> 
+    
     </main>
 
 
