@@ -33,7 +33,6 @@
     //assigns form data to temporary variables
     if(isset($_POST['order'])) 
     {
-      $_SESSION['cart'] = $_POST;
       $movieId = $_POST['movie']['id'];
       $movieDay = $_POST['movie']['day'];
       $movieHour = $_POST['movie']['hour'];
@@ -51,74 +50,98 @@
       $custMobile = $_POST['cust']['mobile'];
       $custCard = $_POST['cust']['card'];
       $custExpiry = $_POST['cust']['expiry'];
-    }
-    
-
-    //all the validation checks
-      // validateMovieID($movieId);
-      // validateMovieDay($movieDay);
-      // validateMovieHour($movieHour);
-
-      // validateNumSeats($seatsSTA);
-      // validateNumSeats($seatsSTP);
-      // validateNumSeats($seatsSTC);
-      // validateNumSeats($seatsFCA);
-      // validateNumSeats($seatsFCP);
-      // validateNumSeats($seatsFCC);
-
-      // validateCustName($custName);
-      // validateCustEmail($custEmail);
-      // validateCustMobile($custMobile);
-      // validateCustCard($custCard);
-      // validateCardExpiry($custCard);
 
     //checks whether all form data is valid
-    if(validateMovieID($movieId) && validateMovieDay($movieDay) && validateMovieHour($movieHour)
-      && validateNumSeats($seatsSTA) && validateNumSeats($seatsSTP) && validateNumSeats($seatsSTC)
-      && validateNumSeats($seatsFCA) && validateNumSeats($seatsFCP) && validateNumSeats($seatsFCC)
-      && validateCustName($custName) && validateCustEmail($custEmail) && validateCustMobile($custMobile)
-      && validateCustCard($custCard) && validateCardExpiry($custCard))
-    {
-      //add form data to _SESSION
-      $_SESSION["user"]['movieId'] = $movieId;
-      $_SESSION["user"]['movieDay'] = $movieDay;
-      $_SESSION["user"]['movieHour'] = $movieHour;
+      if(validateMovieID($movieId) && validateMovieDay($movieDay) && validateMovieHour($movieHour)
+        && validateNumSeats($seatsSTA) && validateNumSeats($seatsSTP) && validateNumSeats($seatsSTC)
+        && validateNumSeats($seatsFCA) && validateNumSeats($seatsFCP) && validateNumSeats($seatsFCC)
+        && validateCustName($custName) && validateCustEmail($custEmail) && validateCustMobile($custMobile)
+        && validateCustCard($custCard) && validateCardExpiry($custExpiry))
+      {
+        echo "<div id= 'sessionValues'>";
+        echo "Movie Id: " . $_SESSION["cart"]["movie"]['id'] . "<br>";
+        echo "Movie Day: " . $_SESSION["cart"]["movie"]['day'] . "<br>";
+        echo "Movie Hour: " . $_SESSION["cart"]["movie"]['hour'] . "<br>";
 
-      $_SESSION["user"]['seatsSTA'] = $seatsSTA;
-      $_SESSION["user"]['seatsSTP'] = $seatsSTP;
-      $_SESSION["user"]['seatsSTC'] = $seatsSTC;
-      $_SESSION["user"]['seatsFCA'] = $seatsFCA;
-      $_SESSION["user"]['seatsFCP'] = $seatsFCP;
-      $_SESSION["user"]['seatsFCC'] = $seatsFCC;
+        echo "Seats-STA: " . $_SESSION["cart"]["seats"]['STA'] . "<br>";
+        echo "Seats-STP: " . $_SESSION["cart"]["seats"]['STP'] . "<br>";
+        echo "Seats-STC: " . $_SESSION["cart"]["seats"]['STC'] . "<br>";
+        echo "Seats-FCA: " . $_SESSION["cart"]["seats"]['FCA'] . "<br>";
+        echo "Seats-FCP: " . $_SESSION["cart"]["seats"]['FCP'] . "<br>";
+        echo "Seats-FCC: " . $_SESSION["cart"]["seats"]['FCC'] . "<br>";
 
-      $_SESSION["user"]['custName'] = $custName;
-      $_SESSION["user"]['custMobile'] = $custMobile;
-      $_SESSION["user"]['custEmail'] = $custEmail;
-      $_SESSION["user"]['cardNo'] = $custCard . ", ";
-      $_SESSION["user"]['cardExpiry'] = $custExpiry . "<br>";
+        echo "Customer Name: " . $_SESSION["cart"]["cust"]['name'] . "<br>";
+        echo "Customer Mobile: " . $_SESSION["cart"]["cust"]['mobile'] . "<br>";
+        echo "Customer Email: " . $_SESSION["cart"]["cust"]['email'] . "<br>";
+        echo "Card Number: " . $_SESSION["cart"]["cust"]['card'] . "<br>";
+        echo "Card Expiry: " . $_SESSION["cart"]["cust"]['expiry'];
+        echo "</div>";
 
-      echo "Movie Id: " . $_SESSION["user"]['movieId'] . ", ";
-      echo "Movie Day: " . $_SESSION["user"]['movieDay'] . ", ";
-      echo "Movie Hour: " . $_SESSION["user"]['movieHour'] . "<br>";
-
-      echo "Seats-STA: " . $_SESSION["user"]['seatsSTA'] . ", ";
-      echo "Seats-STP: " . $_SESSION["user"]['seatsSTP'] . ", ";
-      echo "Seats-STC: " . $_SESSION["user"]['seatsSTC'] . ", ";
-      echo "Seats-FCA: " . $_SESSION["user"]['seatsFCA'] . ", ";
-      echo "Seats-FCP: " . $_SESSION["user"]['seatsFCP'] . ", ";
-      echo "Seats-FCC: " . $_SESSION["user"]['seatsFCC'] . "<br>";
-
-      echo "Customer Name: " . $_SESSION["user"]['custName'] . ", ";
-      echo "Customer Mobile: " . $_SESSION["user"]['custMobile'] . ", ";
-      echo "Customer Email: " . $_SESSION["user"]['custEmail'] . ", ";
-      echo "Card Number: " . $_SESSION["user"]['cardNo'] . ", ";
-      echo "Card Expiry: " . $_SESSION["user"]['cardExpiry'];
+        //send data to session
+        $_SESSION['cart'] = $_POST;
 
 
-      //send data to receipt.
+        //adds receipt to bookings.txt *NOT WORKING* :////
+        addToBookings();  
+
+        //redirect to receipt page
+        header("Location: ../a4/receipt.php");
+        die();
+        
+      }
+
+      else{
+        header("Location: ../a2/index.php");
+        die();
+      }
     }
     echo '</div>';
   }
+
+
+  //attempt at matching the headers in bookings.txt
+//   function addToBookings()
+// {
+//   $movieData = $_SESSION['cart']['movie']; 
+//   $custData = $_SESSION['cart']['cust']; 
+//   $seatsData = $_SESSION['cart']['seats']; 
+
+//   $file = fopen('../a4/bookings.txt', "a"); //opens 'bookings.txt' file
+//   flock($file, LOCK_EX);
+
+//   fputcsv($file, date("D M d"), "\t");
+
+//   foreach($custData as $cells)
+//   {
+//     fputcsv($file, $cells, "\t");
+//   }
+//   foreach($movieData as $cells)
+//   {
+//     fputcsv($file, $cells, "\t");
+//   }
+//   foreach($seatsData as $cells)
+//   {
+//     fputcsv($file, $cells, "\t");
+//   }
+//   //fputcsv($file, calculateTotal());
+//   flock($file, LOCK_UN);
+//   fclose($file);
+// }
+
+
+//adds the current booking to the bookings.txt *NOT WORKING and I have no idea why :/ *
+function addToBookings(){
+  $cells = $_SESSION['cart']['cust'];
+
+  $fp = fopen('bookings.txt', 'a');
+  flock($fp, LOCK_EX);
+  foreach ($cells as $row)
+  {
+    fputcsv($fp, $row, "\t");
+  }
+  flock($fp, LOCK_UN);
+  fclose($fp);
+}
 
 
   function validateMovieID($movieId){
@@ -232,34 +255,113 @@
     }
   }
 
-
-  //validates expiry date of customer's card
   function validateCardExpiry($custExpiry)
   {
-    //gets current date in YYYY-MM
-    date_default_timezone_set('Australia/Melbourne');
-    $currentDate = date('Y-m');
-    $currentDateArray = explode('-', $currentDate, 2);
-    $expiryArray = explode('-', $custExpiry, 2);
+    date_default_timezone_set("Australia/Melbourne");
+    //gets the first day of the card expiry month
+    $start_date = date_create($custExpiry . '-01'); 
+    //echo "StartDate: " . $start_date->format('y-m-d');
 
-    //checks if date is in future
-    if($expiryArray[0] > $currentDateArray[0] || ($expiryArray[0] == $currentDateArray[0] && $expiryArray[1] > $currentDateArray[1]))
-    {
+    //gets the date YYYY-MM in 28 days
+    $end_date = date_create(Date("y-m-d")); 
+    //echo "EndDate: " . $end_date->format('y-m-d');
+    $diff = date_diff($start_date, $end_date);
+    //echo "DiffDays: " . $diff->format("%a");
+
+    if($diff->format("%a")>28){
       return true;
     }
-    else
-    {
+    else{
+      echo "<script> alert('Invalid Expiry Date'); </script>";
       return false;
-    }
+    } 
+      
+    // Get the difference and divide into  
+    // total no. seconds 60/60/24 to get  
+    // number of days 
+    echo date_diff($start_date, $end_date)->format("%a"); 
   }
 
 
 
-  // function printToReceipt()
-  // {
-  //   $fp = fopen('bookings.txt');
-  //   flock($fp, );
-  // };
+
+
+function calculateTotal()
+{
+  $day = $_SESSION["cart"]["movie"]["day"];
+  $time = $_SESSION["cart"]["movie"]["hour"];
+
+  $STA = $_SESSION["cart"]["seats"]['STA'];
+  $STP = $_SESSION["cart"]["seats"]['STP'];
+  $STC = $_SESSION["cart"]["seats"]['STC'];
+  $FCA = $_SESSION["cart"]["seats"]['FCA'];
+  $FCP = $_SESSION["cart"]["seats"]['FCP'];
+  $FCC = $_SESSION["cart"]["seats"]['FCC'];
+
+  $STAprice;
+  $STPprice;
+  $STCprice;
+  $FCAprice;
+  $FCPprice;
+  $FCCprice;
+
+    if($day == "MON" ||$day == "WED" || $time == "T12")
+    {
+        $STAprice = 14.00;
+        $STPprice = 12.50;
+        $STCprice = 11.00;
+        $FCAprice = 24.00;
+        $FCPprice = 22.50;
+        $FCCprice = 21.00;
+    }
+    else{
+        $STAprice = 19.80;
+        $STPprice = 17.50;
+        $STCprice = 15.30;
+        $FCAprice = 30.00;
+        $FCPprice = 27.00;
+        $FCCprice = 24.00;
+    }
+    $total = number_format(($STA * $STAprice) + ($STP*$STPprice) + ($STC*$STCprice) + ($FCA*$FCAprice) + ($FCP*$FCPprice) + ($FCC*$FCCprice), 2);
+    return $total . " (inc. $" . number_format($total/10, 2) . " GST)";
+}
+
+
+function createReceipt()
+{
+  echo "<h1>" . $_SESSION["cart"]["movie"]['id'] . " - " . $_SESSION["cart"]["movie"]["day"] . " - " . $_SESSION["cart"]["movie"]["hour"] . "</h1>";
+
+  echo "<h1 id=cinema>CINEMA 1</h1>";
+
+  echo "<div id= 'totalPrice'>Name: " . $_SESSION["cart"]["cust"]["name"] . "<br>";
+  echo "Price: $" . calculateTotal() . "</div>";
+  
+  echo "<div id= 'seats'><b>SEATS: </b><br>";
+  printSeatType('STA');
+  printSeatType('STP');
+  printSeatType('STC');
+  printSeatType('FCA');
+  printSeatType('FCP');
+  printSeatType('FCC');
+  
+  echo "</div>";
+  echo "<hr style='border-top: dashed 3px;' />";
+
+  echo "<div id= 'bottomReceipt'>" . $_SESSION["cart"]["movie"]['id'] . " - " . $_SESSION["cart"]["movie"]["day"] . " - " . $_SESSION["cart"]["movie"]["hour"];
+  echo "<br>Price: $" . calculateTotal() . "</div>";
+}
+
+
+function printSeatType($seatType)
+{
+  $seatValue = $_SESSION['cart']['seats'][$seatType];
+  if($seatValue !=0 && $seatValue != NULL)
+  {
+    echo $seatType . ": " . $_SESSION['cart']['seats'][$seatType] . "<br>";
+  }
+}
+
+
 
 
 

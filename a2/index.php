@@ -1,4 +1,5 @@
-<?php include('../a4/tools.php'); ?>
+<?php include('../a4/tools.php'); 
+verifyVariables();?>
 
 <!DOCTYPE html>
 <html lang='en'>
@@ -173,9 +174,7 @@
       </div>
     </article>
 
-    <?php 
-        verifyVariables();
-      ?>
+
 
     <div id="synopsisArea">
       <h2 id="movieHeading">
@@ -314,7 +313,7 @@
                 <br>
                 <label for="cust-expiry">Expiry <input type="month" name="cust[expiry]" id='cust-expiry' required></label>
                 <br>
-                <input type="submit" name="order" value="Order" id='order' onclick="validateDate()">
+                <input type="submit" name="order" value="Order" id='order'>
               </div> <!-- end formRHS -->
             </div><!-- end formInfo -->
           </form>
@@ -328,10 +327,18 @@
     echo "Why is \n $aaarg \n not working?"; 
     */
     ?> 
+<div id= 'debugModule'><b>DEBUG MODULE</b><br>
+    <?php 
+    echo '<b>Tool 1 - POST and SESSION data</b><br>';
+    echo '_POST Data:';
+    preShow($_POST); // ie echo a string
+    echo '<br>_SESSION Data:';
+    preShow($_SESSION);
+    ?> 
 
-    <?php  /* tool2
+    <?php  //tool2
+    echo '<b>Tool 2 - Page Code: </b><br>';
     printMyCode(); 
-    */
     ?> 
 
     <?php /* tool3
@@ -339,6 +346,7 @@
     php2js($pricesArrayPHP, 'pricesArrayJS'); // ie echos javascript equivalent code
     */ 
     ?> 
+</div>
     
     </main>
 
@@ -355,7 +363,6 @@
       Jonathon Mitterbacher - s3784464 - <a href='https://github.com/s3784464/wp'>GitHub Repository </a>- Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-      <div><button id='debugButton' onclick='<?php verifyVariables() ?>'>Debug</button></div>
     </footer>
 
     <script src="../a3/script.js"></script>

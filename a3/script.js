@@ -181,7 +181,7 @@ function calculateTotal(){
     var FCPprice;
     var FCCprice;
 
-    if(day == "Monday" ||day == "Wednesday" || time == "12pm"){
+    if(day == "Monday" || day == "Wednesday" || time == "12pm"){
         STAprice = 14.00;
         STPprice = 12.50;
         STCprice = 11.00;

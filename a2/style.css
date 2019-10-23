@@ -15,6 +15,7 @@ header{
     font-family: sans-serif;
     border-radius: 0px 0px 40px 40px;
     padding-bottom:0;
+    margin-top: 0;
 }
 header img{
     float: left;
@@ -487,6 +488,21 @@ span.avengersHeading{
     font-size: 1.5vw;
     padding: 10px 0 10px 0;
 
+}
+
+#pre{
+    background: black;
+    font-size: 1.5vw;
+    padding: 10px 0 10px 0;
+}
+
+#sessionValues{
+    background-color: black;
+}
+
+#debugModule{
+    background-color: black;
+    padding-left: 3vw;
 }
 
 @media only screen and (max-width: 1000px){ 
