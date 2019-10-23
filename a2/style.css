@@ -482,6 +482,13 @@ span.avengersHeading{
     margin-right: 10px;
 }
 
+#phpVariables{
+    background: black;
+    font-size: 1.5vw;
+    padding: 10px 0 10px 0;
+
+}
+
 @media only screen and (max-width: 1000px){ 
     .nowShowing{
          display: block;
@@ -517,5 +524,6 @@ footer{
     margin-top: 40px;
 }
 footer a{
-    color: rgb(196, 192, 192);
+    text-decoration: underline;
+    color: rgb(248, 190, 239);
 }

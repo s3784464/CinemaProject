@@ -172,10 +172,10 @@
           </div>
       </div>
     </article>
-    
+
     <?php 
-      getVariables();
-    ?>
+        verifyVariables();
+      ?>
 
     <div id="synopsisArea">
       <h2 id="movieHeading">
@@ -318,8 +318,6 @@
               </div> <!-- end formRHS -->
             </div><!-- end formInfo -->
           </form>
-
-          
     </article>
 
  
@@ -357,6 +355,7 @@
       Jonathon Mitterbacher - s3784464 - <a href='https://github.com/s3784464/wp'>GitHub Repository </a>- Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+      <div><button id='debugButton' onclick='<?php verifyVariables() ?>'>Debug</button></div>
     </footer>
 
     <script src="../a3/script.js"></script>
