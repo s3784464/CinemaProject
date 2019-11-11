@@ -181,12 +181,12 @@ function calculateTotal(){
     var FCPprice;
     var FCCprice;
 
-    if(day == "Monday" || day == "Wednesday" || time == "12pm"){
+    if(day == "Monday" ||day == "Wednesday" || time == "12pm"){
         STAprice = 14.00;
         STPprice = 12.50;
         STCprice = 11.00;
         FCAprice = 24.00;
-        FCPprice = 22.50;
+        FCPprice=22.50;
         FCCprice = 21.00
     }
     else{
@@ -194,7 +194,7 @@ function calculateTotal(){
         STPprice = 17.50;
         STCprice = 15.30;
         FCAprice = 30.00;
-        FCPprice = 27.00;
+        FCPprice=27.00;
         FCCprice = 24.00
     }
     totalPrice = ((+STA * STAprice) + (+STP*STPprice) + (+STC*STCprice) + (+FCA*FCAprice) + (+FCP*FCPprice) + (+FCC*FCCprice)).toFixed(2);
@@ -247,10 +247,9 @@ function validateDate(){
     }
     //console.log(currentMonth);
 
-    console.log("value is" + expiryDate);
     if (expiryYear < date.getFullYear() || (expiryYear == date.getFullYear() && expiryMonth <= currentMonth))
     {
-        //alert("Invalid Card Expiry Date");
+        alert("Invalid Card Expiry Date - card is expired");
         document.getElementById("cust-expiry").value = '';
         return false;
     }
