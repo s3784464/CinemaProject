@@ -1,1 +1,545 @@
-/* This stylesheet is for your tested CSS, styles here will be deactivated when toggling wireframe style *./
+html{
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100vw;
+    height: 6vw;
+    position: fixed;
+    border: 0;
+    color: #E2FCEF;
+    background: rgba(23, 15, 17, 0.822);
+    font-family: sans-serif;
+    border-radius: 0px 0px 40px 40px;
+    padding-bottom:0;
+    margin-top: 0;
+}
+header img{
+    float: left;
+    clear: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -1%;
+    margin-bottom: 0%;
+    padding: 0;
+    width: auto;
+    height: 6vw;
+}
+.lunardo{
+    font-size: 2.3vw;
+    padding: 0;
+    margin:0;
+}
+header .lunardo h1{
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+}
+#navbar{
+    text-align: center;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-weight: bold;
+    font-size: 3vw;
+}
+nav a{
+    text-decoration: none;
+    color: #E2FCEF;
+    font-size: 2.5vw;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: left;
+    padding: 5px;
+}
+nav a:hover,
+nav a.active{
+    color: white;
+    transition: 0.35s;
+    background-color: rgb(95, 93, 95);
+}
+
+body{
+    background-image: url("media/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+h2{
+    color: white;
+    background:rgb(14, 9, 10);
+    margin: 0px 0px 0px 0px;
+    font-size: 65px;
+    text-align: center;
+    padding: 5px;
+    border-radius:25px 25px 0 0;
+}
+
+h3{
+    color: #E2FCEF;
+    background: #170F11;
+}
+
+#About-Us{
+    padding-top: 6vw;  
+    font-size: 2.05vw;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+#aboutUsInfo{
+    background-image: linear-gradient(to top, rgb(12, 1, 1) , rgb(88, 5, 5));
+    border-radius:25px;
+}
+
+
+#About-Us img{
+    margin: 0px;
+    padding: 0px;
+  }
+
+#About-Us a{
+    text-decoration: underline;
+    font-weight: bold;
+    color: rgb(255, 183, 183);
+    
+}
+#About-Us p{
+    margin-top: 1vw;
+    margin-left: 3vw;
+    margin-bottom: 0;
+    padding-bottom:0;
+}
+
+#About-Us ul{
+    margin-left: 1vw;
+}
+
+.Image {
+    display: inline-block;
+    width: 14vw;
+    height: auto;
+}
+
+.imageContainer:hover:after{
+    display: none;
+}
+
+span.imageContainer{
+    background: rgb(17, 16, 16);
+    margin-left: 17vw;
+    border: solid rgb(109, 109, 109) 3px;
+    width: 20vw;
+    height: 15vw;
+    text-align: center;
+}
+
+.hoverPics{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    width:80vw;
+    margin: 0%;
+    padding-bottom: 1vw;
+    padding-left: 7vw;
+    padding-right: 0;
+    border: 0%;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+#Prices{
+    padding-top: 6vw; 
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 35px;
+    height: 15vw;
+}
+
+table, th, td{
+    border: 1px solid black;
+    height: 4vw;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background: #69335e;
+}
+tr:nth-child(odd){
+    background: #4b2543;
+}
+
+tr:hover {
+    background-color: rgb(109, 28, 146);
+}
+
+table .topTable{
+   background-color:#29052c;
+   font-weight: bold;
+}
+
+#Now-Showing{
+    padding-top: 6vw;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#Now-Showing #nowShowingContainter{
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.showcases{
+    font-family: sans-serif;
+}
+
+
+#Now-Showing p{
+    font-size: 2.3vw;
+    margin: 7px;
+}
+
+#Now-Showing img{
+    max-width: 100%;
+    width: auto;
+    height: 32vw;
+    float: left;
+    margin: 2%;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#Now-Showing a{
+    text-decoration: none;
+    color: white;
+    margin:0;
+    padding: 0;
+}
+
+div.desc{
+    min-height: 35vw;
+}
+
+.nowShowing{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    border: 0;
+    width: 100%;
+}
+
+
+.nowShowing h4{
+    font-size: 3vw;
+    padding: 0px;
+    margin: 1vw;
+    margin-top:0;
+}
+
+
+li{
+    list-style-type: circle;
+}
+
+#moviePanelACT{
+    border: 3px solid rgb(177, 11, 199);
+    background: rgb(83, 9, 143);
+    margin: 0 20px 20px 0;
+    min-height: 35vw;
+}
+#moviePanelACT:hover{
+    background: rgb(55, 8, 94);
+}
+
+#moviePanelRMC {
+    border: 3px solid rgb(226, 204, 7);
+    background: rgb(221, 137, 28);
+    margin: 0 0 20px 20px;
+    min-height: 35vw;
+}
+#moviePanelRMC:hover{
+    background: rgb(160, 99, 20);
+}
+
+#moviePanelANM {
+    border: 3px solid rgb(218, 22, 97);
+    background: rgb(129, 22, 76);
+    margin: 20px 20px 0 0;
+    min-height: 35vw;
+}
+#moviePanelANM:hover{
+    background: rgb(88, 15, 52);
+}
+#moviePanelAHF {
+    border: 3px solid rgb(59, 159, 253);
+    background: rgb(13, 83, 189);
+    margin: 20px 0 0 20px;
+    min-height: 35vw;
+}  
+#moviePanelAHF:hover{
+    background: rgb(11, 58, 129);
+}
+
+
+#synopsisArea{
+    display: none;
+    background: rgb(82, 81, 81);
+    border-radius:25px 25px 25px 25px;
+    min-height: 26vw;
+    margin: 0 10px 0 10px;
+    height: auto;
+}
+
+
+#synopsisArea p{
+    margin-top: 5px;
+    font-size: 30px;
+    margin-left: 15px;
+}
+#synopsisArea h6{
+    font-size: 38px;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+#synopsisArea iframe{
+    display:block;
+    margin-right: auto;
+    clear: top;
+    float: right;
+    margin: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    width: 39vw;
+    height: 20vw;
+}
+
+#synopsisArea .sessionTime{
+    display: inline-block;
+    width: 235px;
+    height: 40px;
+    margin: 5px;
+    margin-left: 15px;
+    padding: 5px;
+    border: 5px double rgb(15, 15, 15);    
+    background-color: rgb(54, 54, 54); 
+    text-align: center;
+    font-size: 30px;
+}
+
+#synopsisArea .sessionTime:hover{
+    background: rgb(192, 2, 2); 
+}
+
+#synopsisArea .movieHeading{
+    display: inline-block;
+    
+}
+#synopsisTitle{
+    float: left;
+    margin-left: 15px;
+}
+#movieClassification{
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+#balancingText{
+    float: right;
+    margin-right: 15px;
+    visibility: hidden;
+}
+
+    
+
+.links{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+span.avengersHeading{
+    grid-column-start: 0;
+    grid-column-end: 2;
+    float: left;
+}
+
+#formInfo{
+    display: grid;
+    border-radius:0 0 25px 25px;
+    margin: 0;
+    padding:0;
+    width: 99%;
+    
+}
+
+#bookingForm{
+    padding: 0;
+    font-size: 20px;
+    border-radius:0 0 25px 25px;
+    margin: 0 10px 0 10px;
+    width: auto;
+    background: rgb(92, 76, 104);
+    display: none;
+    padding-bottom: 12px;
+    color: white;
+}
+
+#bookingForm h2{
+    padding: 10px;
+    padding-left: 15px;
+    margin: 0;
+    text-align: left;
+    border-radius:0;
+    color: white;
+}
+
+#bookingForm h5{
+    margin: 0;
+    margin-top: -25px;
+    margin-left: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+    background: rgb(92, 76, 104);
+    font-size: 30px;
+    text-align: center;
+    width: 140px;
+}
+
+#bookingForm .bookingHeading{
+    display: inline;
+    
+}
+
+#bookingTitle{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    font-size: 40px;
+    margin: 0;
+}
+
+#formLHS{
+    margin-top: 15px;
+    margin-right: 8vw;
+    grid-column-start: 1;
+    width: 25vw;
+    text-align: right;
+}
+
+#formRHS{
+    grid-column-start: 2;
+    text-align: right;
+    margin-top: 2.3vw;
+    margin-right: 30vw;
+    width: 25vw;
+    padding-right: 10vw;
+}
+
+#formRHS p{
+    margin: 20px;
+
+}
+
+#standard{
+    border: solid rgb(0, 0, 0) 1px;
+    padding: 10px;
+    margin: 10px;
+}
+#firstClass{
+    border: solid rgb(0, 0, 0) 1px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#formTotal{
+    display: inline-block;
+}
+#totalValue{
+    display: inline-block;
+    border: dashed black 2px;
+    padding: 1px 8px 1px 8px;
+    width: 100px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#phpVariables{
+    background: black;
+    font-size: 1.5vw;
+    padding: 10px 0 10px 0;
+
+}
+
+#pre{
+    background: black;
+    font-size: 1.5vw;
+    padding: 10px 0 10px 0;
+}
+
+#sessionValues{
+    background-color: black;
+}
+
+#debugModule{
+    background-color: black;
+    padding-left: 3vw;
+}
+
+@media only screen and (max-width: 1000px){ 
+    .nowShowing{
+         display: block;
+     }
+     .endgame{
+         margin:0;
+         min-height: 37vw;
+         height: auto;
+         margin-bottom: 20px;
+     }
+     .topEndWedding{
+         margin-left: 0;
+         min-height: 37vw;
+         height: auto;
+     }
+     .dumbo{
+         margin-right:0;
+         min-height: 37vw;
+         height:auto;
+     }
+     .theHappyPrince{
+         margin-left: 0;
+         min-height: 37vw;
+         height: auto;
+     }
+ }
+
+footer{
+    text-align: center;
+    background: rgb(15, 3, 19);
+    border-radius: 100px 100px 0px 0px;
+    border: solid rgb(23, 3, 36) 2px;
+    margin-top: 40px;
+}
+footer a{
+    text-decoration: underline;
+    color: rgb(248, 190, 239);
+}
